@@ -93,6 +93,7 @@
                 android:layout_height="wrap_content" />
 
             <RadioGroup
+                android:id="@+id/func"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="fill"
@@ -100,7 +101,7 @@
 
 
                 <RadioButton
-                    android:id="@+id/radioButton"
+                    android:id="@+id/radioButton1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:shadowColor="#CA0505"
@@ -156,6 +157,7 @@
                 android:layout_height="wrap_content" />
 
             <RadioGroup
+                android:id="@+id/loc_for"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:gravity="fill"
@@ -207,28 +209,28 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/checkBox9"
+                    android:id="@+id/checkBox1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="超商" />
 
                 <CheckBox
-                    android:id="@+id/checkBox8"
+                    android:id="@+id/checkBox2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="量販店" />
 
                 <CheckBox
-                    android:id="@+id/checkBox10"
+                    android:id="@+id/checkBox3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="餐廳" />
 
                 <CheckBox
-                    android:id="@+id/checkBox6"
+                    android:id="@+id/checkBox4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -243,28 +245,28 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/checkBox8"
+                    android:id="@+id/checkBox5"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="繳費" />
 
                 <CheckBox
-                    android:id="@+id/checkBox7"
+                    android:id="@+id/checkBox6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="機票" />
 
                 <CheckBox
-                    android:id="@+id/checkBox12"
+                    android:id="@+id/checkBox7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="飲料店" />
 
                 <CheckBox
-                    android:id="@+id/checkBox11"
+                    android:id="@+id/checkBox8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -278,28 +280,28 @@
                 android:orientation="horizontal">
 
                 <CheckBox
-                    android:id="@+id/checkBox13"
+                    android:id="@+id/checkBox9"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="通勤" />
 
                 <CheckBox
-                    android:id="@+id/checkBox15"
+                    android:id="@+id/checkBox10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="CheckBox" />
 
                 <CheckBox
-                    android:id="@+id/checkBox14"
+                    android:id="@+id/checkBox11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="CheckBox" />
 
                 <CheckBox
-                    android:id="@+id/checkBox16"
+                    android:id="@+id/checkBox12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -327,7 +329,7 @@
                     android:textSize="24sp" />
 
                 <EditText
-                    android:id="@+id/editTextPhone"
+                    android:id="@+id/input_salary"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -345,7 +347,7 @@
                 android:textSize="36sp" />
 
             <Button
-                android:id="@+id/button"
+                android:id="@+id/send_out"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
