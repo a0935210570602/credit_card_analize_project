@@ -1,1 +1,55 @@
-<mxfile host="app.diagrams.net" modified="2020-08-13T03:50:58.530Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" version="13.6.2" etag="NRmgW7jy5FBDucs7D3UK" type="github"><diagram id="WoF5ZmT5TutVCkL6loxM">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2020-08-13T04:05:31.629Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="L_2nMNBcMsX6xcsJHTPF" version="13.6.2" type="github">
+  <diagram id="WoF5ZmT5TutVCkL6loxM" name="Page-1">
+    <mxGraphModel dx="1504" dy="363" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="VNFoR2ObTazX-s3HmkAG-1" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-80" y="130" width="200" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="VNFoR2ObTazX-s3HmkAG-2" value="使用者畫面&lt;br&gt;統計資料" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="160" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VNFoR2ObTazX-s3HmkAG-3" value="傳送API需求&lt;br&gt;(查看資料是否需要更新)" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="250" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="VNFoR2ObTazX-s3HmkAG-5" value="傳送更新需求至伺服器" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-63" y="380" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="VNFoR2ObTazX-s3HmkAG-6" value="是" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-22" y="330" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VNFoR2ObTazX-s3HmkAG-7" value="否" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="40" y="330" width="40" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="VNFoR2ObTazX-s3HmkAG-11" value="傳送分析需求至伺服器" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="33" y="380" width="70" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="VNFoR2ObTazX-s3HmkAG-12" value="" style="endArrow=classic;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VNFoR2ObTazX-s3HmkAG-3" target="VNFoR2ObTazX-s3HmkAG-5">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="430" as="sourcePoint" />
+            <mxPoint x="-25" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VNFoR2ObTazX-s3HmkAG-13" value="" style="endArrow=classic;html=1;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=0.75;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="VNFoR2ObTazX-s3HmkAG-3" target="VNFoR2ObTazX-s3HmkAG-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="430" as="sourcePoint" />
+            <mxPoint x="160" y="380" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VNFoR2ObTazX-s3HmkAG-14" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="VNFoR2ObTazX-s3HmkAG-5" target="VNFoR2ObTazX-s3HmkAG-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="470" as="sourcePoint" />
+            <mxPoint x="160" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="VNFoR2ObTazX-s3HmkAG-15" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="VNFoR2ObTazX-s3HmkAG-2" target="VNFoR2ObTazX-s3HmkAG-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="90" y="380" as="sourcePoint" />
+            <mxPoint x="140" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
