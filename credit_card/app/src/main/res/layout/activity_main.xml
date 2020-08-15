@@ -96,7 +96,7 @@
                 android:id="@+id/func"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:gravity="fill"
+                android:gravity="center_horizontal"
                 android:orientation="horizontal">
 
 
@@ -118,19 +118,6 @@
                     android:text="紅利點數回饋"
                     android:textColor="#FFFFFF" />
 
-                <RadioButton
-                    android:id="@+id/radioButton3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="禮遇回饋"
-                    android:textColor="#FFFFFF" />
-
-                <RadioButton
-                    android:id="@+id/radioButton4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="出國里程優惠"
-                    android:textColor="#FFFFFF" />
             </RadioGroup>
 
             <TextView
@@ -351,8 +338,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="send"
                 android:text="資料送出"
                 tools:layout_editor_absoluteY="1021dp" />
+
+            <TextView
+                android:id="@+id/show"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#F8F6F6"
+                android:textSize="24sp" />
 
         </LinearLayout>
     </ScrollView>
