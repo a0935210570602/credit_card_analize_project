@@ -361,6 +361,13 @@
                 android:textColor="#F8F6F6"
                 android:textSize="24sp" />
 
+            <TextView
+                android:id="@+id/show1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#FFFFFF" />
+
         </LinearLayout>
     </ScrollView>
 
