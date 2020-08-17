@@ -200,28 +200,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="超商" />
+                    android:text="超商"
+                    android:textColor="#FBFBFB" />
 
                 <CheckBox
                     android:id="@+id/checkBox2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="量販店" />
+                    android:text="量販店"
+                    android:textColor="#FBFAFA" />
 
                 <CheckBox
                     android:id="@+id/checkBox3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="餐廳" />
+                    android:text="餐廳"
+                    android:textColor="#FBFAFA" />
 
                 <CheckBox
                     android:id="@+id/checkBox4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="電影院" />
+                    android:text="電影院"
+                    android:textColor="#FBFAFA" />
 
             </LinearLayout>
 
@@ -236,28 +240,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="繳費" />
+                    android:text="繳費"
+                    android:textColor="#FDFCFC" />
 
                 <CheckBox
                     android:id="@+id/checkBox6"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="機票" />
+                    android:text="機票"
+                    android:textColor="#FDFCFC" />
 
                 <CheckBox
                     android:id="@+id/checkBox7"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="飲料店" />
+                    android:text="飲料店"
+                    android:textColor="#FDFCFC" />
 
                 <CheckBox
                     android:id="@+id/checkBox8"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="百貨公司" />
+                    android:text="百貨公司"
+                    android:textColor="#FDFCFC" />
 
             </LinearLayout>
 
@@ -271,28 +279,32 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="通勤" />
+                    android:text="通勤"
+                    android:textColor="#FDFBFB" />
 
                 <CheckBox
                     android:id="@+id/checkBox10"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="CheckBox" />
+                    android:text="CheckBox"
+                    android:textColor="#FAF6F6" />
 
                 <CheckBox
                     android:id="@+id/checkBox11"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="CheckBox" />
+                    android:text="CheckBox"
+                    android:textColor="#FAF6F6" />
 
                 <CheckBox
                     android:id="@+id/checkBox12"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="CheckBox" />
+                    android:text="CheckBox"
+                    android:textColor="#FFFFFF" />
             </LinearLayout>
 
             <TextView
