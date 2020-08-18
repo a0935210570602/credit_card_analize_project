@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-08-16T19:22:50.175Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="XRKmy4TTTtNGSOvMCnH1" version="13.6.2" type="github">
+<mxfile host="app.diagrams.net" modified="2020-08-18T01:30:48.417Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.125 Safari/537.36" etag="BfkJwyR0z7ifhIo1BAPu" version="13.6.2" type="github">
   <diagram id="WoF5ZmT5TutVCkL6loxM" name="Page-1">
-    <mxGraphModel dx="1683" dy="545" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2050" dy="779" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -131,7 +131,7 @@
           <mxGeometry x="-715" y="375" width="133" height="60" as="geometry" />
         </mxCell>
         <mxCell id="JFq6KsMxWo-ai3jtECya-6" value="&lt;a href=&quot;https://givemepass.blogspot.com/2011/12/http-server.html&quot;&gt;如何傳送API需求至伺服器&lt;/a&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-770" y="267" width="150" height="73" as="geometry" />
+          <mxGeometry x="-530" y="230" width="127" height="46.5" as="geometry" />
         </mxCell>
         <mxCell id="JFq6KsMxWo-ai3jtECya-7" value="&lt;a href=&quot;https://igouist.github.io/post/201912-android-fetch-mysql-using-xampp/&quot;&gt;如何架設伺服器和資料庫&lt;/a&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
           <mxGeometry x="-200" y="90" width="120" height="50" as="geometry" />
@@ -140,10 +140,22 @@
           <mxGeometry x="-40" y="100" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="JFq6KsMxWo-ai3jtECya-10" value="&lt;a href=&quot;https://www.twblogs.net/a/5d073154bd9eee1ede03952f&quot;&gt;PHP操作 python程式&lt;/a&gt;1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-393.5" y="340" width="133.5" height="50" as="geometry" />
+          <mxGeometry x="-393.5" y="325" width="133.5" height="50" as="geometry" />
         </mxCell>
-        <mxCell id="bdRmtSucAfaKWC_nttk2-1" value="&lt;a href=&quot;https://codertw.com/%E9%96%8B%E7%99%BC%E8%AA%9E%E8%A8%80/113/&quot;&gt;PHP操作 python程式&lt;/a&gt;2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="-393.5" y="390" width="133.5" height="50" as="geometry" />
+        <mxCell id="bdRmtSucAfaKWC_nttk2-1" value="&lt;a href=&quot;https://codertw.com/%E9%96%8B%E7%99%BC%E8%AA%9E%E8%A8%80/113/&quot;&gt;PHP操作 python程式&lt;/a&gt;2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
+          <mxGeometry x="-380" y="360" width="133.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Ms80HNmhcPzy2Ck67E_E-1" value="&lt;a href=&quot;https://wiki.mcneel.com/zh-tw/zoo/window7firewall&quot;&gt;打開本地port 80 以提供連線&lt;/a&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-433.5" y="80" width="133.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Ms80HNmhcPzy2Ck67E_E-2" value="&lt;a href=&quot;https://colinchu.pixnet.net/blog/post/107902939&quot;&gt;phpmyadmin外部連線修改工作&lt;/a&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-433.5" y="140" width="133.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="Ms80HNmhcPzy2Ck67E_E-3" value="&lt;a href=&quot;https://thumbb13555.pixnet.net/blog/post/325387050-okhttp&quot;&gt;android studio 使用okhttp連接網路伺服器&lt;/a&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="210" y="650" width="123.5" height="57" as="geometry" />
+        </mxCell>
+        <mxCell id="Ms80HNmhcPzy2Ck67E_E-4" value="&lt;a href=&quot;https://medium.com/@j2a0r0e0d0/%E5%88%9D%E5%87%BA%E8%8C%85%E5%BB%AC-wordpress-org-%E7%B6%B2%E7%AB%99%E6%9E%B6%E8%A8%AD-883776931820&quot;&gt;網站架設&lt;/a&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="-40" y="700" width="133.5" height="50" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
