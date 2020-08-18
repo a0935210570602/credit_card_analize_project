@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">credit_card</string>
+    <string name="app_name">信用卡個人化推薦app</string>
+
+    <string-array name="want_options">
+        <item>排名條件</item>
+        <item>國內現金回饋</item>
+        <item>國外現金回饋</item>
+        <item>年費</item>
+
+    </string-array>
 </resources>
