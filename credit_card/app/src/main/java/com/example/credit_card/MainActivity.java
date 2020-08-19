@@ -58,6 +58,7 @@ public class MainActivity extends AppCompatActivity{
                 Thread thread = new Thread(mutiThread);
                 thread.start(); // 開始執行
 
+
             }
         });
     }
@@ -137,9 +138,7 @@ public class MainActivity extends AppCompatActivity{
             }
             income = input_salary.getText().toString();
             show1.setText(income);
-
             startActivity(new Intent(MainActivity.this, fake_data.class));
-
         }
     };
 }
