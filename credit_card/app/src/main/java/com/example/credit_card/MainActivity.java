@@ -1,14 +1,11 @@
 package com.example.credit_card;
 
 import androidx.appcompat.app.AppCompatActivity;
-import okhttp3.Call;
-import okhttp3.FormBody;
-import okhttp3.OkHttpClient;
-import okhttp3.logging.HttpLoggingInterceptor;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -53,54 +50,107 @@ public class MainActivity extends AppCompatActivity{
 
         input_salary = findViewById(R.id.input_salary);
         send_out = findViewById(R.id.send_out);
-//        send_out.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            // 按鈕事件
-//            public void onClick(View view) {
-//                // 按下之後會執行的程式碼
-//                // 宣告執行緒
-//                Thread thread = new Thread(mutiThread);
-//                thread.start(); // 開始執行
-//            }
-//        });
+        send_out.setOnClickListener(new View.OnClickListener() {
+            @Override
+            // 按鈕事件
+            public void onClick(View view) {
+                // 按下之後會執行的程式碼
+                // 宣告執行緒
+
+                Thread thread = new Thread(mutiThread);
+                thread.start(); // 開始執行
+
+
+            }
+        });
     }
 
     int money_redp;
     int in_loc_fore;
     ArrayList<String> sel = new ArrayList<>();
-    private void sendPOST() {
-//        TextView tvRes = findViewById(R.id.text_Respond);
-        /**建立連線*/
-        OkHttpClient client = new OkHttpClient().newBuilder()
-                .addInterceptor(new HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BASIC))
-                .build();
-        /**設置傳送所需夾帶的內容*/
-        FormBody formBody = new FormBody.Builder()
-                .add("userId", "1")
-                .add("id", "1")
-                .add("title", "Test okHttp")
-                .build();
-        /**設置傳送需求*/
-        Request request = new Request.Builder()
-                .url("http://192.168.0.103/test/is_data_the_last.php")
-                .post(formBody)
-                .build();
-        /**設置回傳*/
-        Call call = client.newCall(request);
-        call.enqueue(new Callback() {
-            @Override
-            public void onFailure(@NotNull Call call, @NotNull IOException e) {
-                /**如果傳送過程有發生錯誤*/
-                tvRes.setText(e.getMessage());
+
+    private Runnable mutiThread = new Runnable(){
+        public void run()
+        {
+            try {
+                URL url = new URL("http://192.168.0.103/test/is_data_the_last.php");
+                // 開始宣告 HTTP 連線需要的物件，這邊通常都是一綑的
+                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+                // 建立 Google 比較挺的 HttpURLConnection 物件
+                connection.setRequestMethod("POST");
+                // 設定連線方式為 POST
+                connection.setDoOutput(true); // 允許輸出
+                connection.setDoInput(true); // 允許讀入
+                connection.setUseCaches(false); // 不使用快取
+                connection.connect(); // 開始連線
+
+                int responseCode =
+                        connection.getResponseCode();
+                // 建立取得回應的物件
+                if(responseCode ==
+                        HttpURLConnection.HTTP_OK){
+                    // 如果 HTTP 回傳狀態是 OK ，而不是 Error
+                    InputStream inputStream =
+                            connection.getInputStream();
+                    // 取得輸入串流
+                    BufferedReader bufReader = new BufferedReader(new InputStreamReader(inputStream, "utf-8"), 8);
+                    // 讀取輸入串流的資料
+                    String box = ""; // 宣告存放用字串
+                    String line = null; // 宣告讀取用的字串
+                    while((line = bufReader.readLine()) != null) {
+                        box += line + "\n";
+                        // 每當讀取出一列，就加到存放字串後面
+                    }
+                    inputStream.close(); // 關閉輸入串流
+                    result = box; // 把存放用字串放到全域變數
+                }
+                // 讀取輸入串流並存到字串的部分
+                // 取得資料後想用不同的格式
+                // 例如 Json 等等，都是在這一段做處理
+
+            } catch(Exception e) {
+                result = e.toString(); // 如果出事，回傳錯誤訊息
             }
 
-            @Override
-            public void onResponse(@NotNull Call call, @NotNull Response response) throws IOException {
-                /**取得回傳*/
-                if(response.body().string().equals("success") == true){
-                    startActivity(new Intent(MainActivity.this, fake_data.class));
+
+            // 當這個執行緒完全跑完後執行
+            runOnUiThread(new Runnable() {
+                public void run() {
+                    show.setText(result); // 更改顯示文字
                 }
+            });
+
+            if(funcGroup.getCheckedRadioButtonId() == R.id.radioButton1)
+                money_redp = 1;
+            else if(funcGroup.getCheckedRadioButtonId() == R.id.radioButton2)
+                money_redp = 2;
+
+            if(location_foreign.getCheckedRadioButtonId() == R.id.radioButton5)
+                in_loc_fore = 1;
+            else if(location_foreign.getCheckedRadioButtonId() == R.id.radioButton6)
+                in_loc_fore = 2;
+            else if(location_foreign.getCheckedRadioButtonId() == R.id.radioButton7)
+                in_loc_fore = 3;
+
+            for(int i:id){
+                chk = findViewById(i);
+                if(chk.isChecked())
+                    sel.add((String) chk.getText());
+                else
+                    sel.remove(chk.getText());
             }
-        });
-    }
+            income = input_salary.getText().toString();
+            show1.setText(income);
+           // startActivity(new Intent(MainActivity.this, fake_data.class));
+
+            if(result.equalsIgnoreCase("success\n") ){
+                startActivity(new Intent(MainActivity.this, fake_data.class));
+            }
+            else
+                Log.d("TAG", "update fall ");
+                Log.d("TAG", result);
+                Log.i("tag", String.valueOf(result.equalsIgnoreCase("success") ));
+
+        }
+    };
 }

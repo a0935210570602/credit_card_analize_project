@@ -365,7 +365,7 @@
                 android:id="@+id/show1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="TextView"
+                android:text="傳輸狀態"
                 android:textColor="#FFFFFF" />
 
         </LinearLayout>
