@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -22,6 +23,7 @@ public class fake_data extends AppCompatActivity {
     Spinner spinner;
     TextView showNO1, showNO2 ,showNO3;
     ImageView img1, img2, img3;
+    ScrollView scrollView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -80,19 +82,51 @@ public class fake_data extends AppCompatActivity {
         img1 = findViewById(R.id.img1);
         img2 = findViewById(R.id.img2);
         img3 = findViewById(R.id.img3);
+        scrollView = findViewById(R.id.scrollView);
 
+        img1.setImageResource(R.drawable.card_04);
+        showNO1.setText("銀行 " + credit_card4.get("銀行") + "\n" +
+                "信用卡名 " + credit_card4.get("信用卡名") + "\n" +
+                "國內現金回饋 " + credit_card4.get("回饋現金(國內)") + "\n" +
+                "國外現金回饋 " + credit_card4.get("回饋現金(國外)") + "\n" +
+                "年費 " + credit_card4.get("年費") + "\n");
+        img2.setImageResource(R.drawable.card_01);
+        showNO2.setText("銀行 " + credit_card1.get("銀行") + "\n" +
+                "信用卡名 " + credit_card1.get("信用卡名") + "\n" +
+                "國內現金回饋 " + credit_card1.get("回饋現金(國內)") + "\n" +
+                "國外現金回饋 " + credit_card1.get("回饋現金(國外)") + "\n" +
+                "年費 " + credit_card1.get("年費") + "\n");
+        img3.setImageResource(R.drawable.card_03);
+        showNO3.setText("銀行 " + credit_card3.get("銀行") + "\n" +
+                "信用卡名 " + credit_card3.get("信用卡名") + "\n" +
+                "國內現金回饋 " + credit_card3.get("回饋現金(國內)") + "\n" +
+                "國外現金回饋 " + credit_card3.get("回饋現金(國外)") + "\n" +
+                "年費 " + credit_card3.get("年費") + "\n");
     }
 
     public void verify(View v){
+        scrollView.scrollTo(0,0);
         switch (spinner.getSelectedItemPosition())
         {
             case 0:
-                img1.setImageResource(R.drawable.whiteboard);
-                showNO1.setText("請先選擇篩選器");
-                img2.setImageResource(R.drawable.whiteboard);
-                showNO2.setText("");
-                img3.setImageResource(R.drawable.whiteboard);
-                showNO3.setText("");
+                img1.setImageResource(R.drawable.card_04);
+                showNO1.setText("銀行 " + credit_card4.get("銀行") + "\n" +
+                        "信用卡名 " + credit_card4.get("信用卡名") + "\n" +
+                        "國內現金回饋 " + credit_card4.get("回饋現金(國內)") + "\n" +
+                        "國外現金回饋 " + credit_card4.get("回饋現金(國外)") + "\n" +
+                        "年費 " + credit_card4.get("年費") + "\n");
+                img2.setImageResource(R.drawable.card_01);
+                showNO1.setText("銀行 " + credit_card1.get("銀行") + "\n" +
+                        "信用卡名 " + credit_card1.get("信用卡名") + "\n" +
+                        "國內現金回饋 " + credit_card1.get("回饋現金(國內)") + "\n" +
+                        "國外現金回饋 " + credit_card1.get("回饋現金(國外)") + "\n" +
+                        "年費 " + credit_card1.get("年費") + "\n");
+                img3.setImageResource(R.drawable.card_03);
+                showNO3.setText("銀行 " + credit_card3.get("銀行") + "\n" +
+                        "信用卡名 " + credit_card3.get("信用卡名") + "\n" +
+                        "國內現金回饋 " + credit_card3.get("回饋現金(國內)") + "\n" +
+                        "國外現金回饋 " + credit_card3.get("回饋現金(國外)") + "\n" +
+                        "年費 " + credit_card3.get("年費") + "\n");
                 break;
             case 1:
                 img1.setImageResource(R.drawable.card_01);

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity{
             public void onClick(View view) {
                 // 按下之後會執行的程式碼
                 // 宣告執行緒
+
                 Thread thread = new Thread(mutiThread);
                 thread.start(); // 開始執行
 
@@ -71,7 +73,7 @@ public class MainActivity extends AppCompatActivity{
         public void run()
         {
             try {
-                URL url = new URL("http://192.168.1.58/GetData.php");
+                URL url = new URL("http://192.168.0.103/test/is_data_the_last.php");
                 // 開始宣告 HTTP 連線需要的物件，這邊通常都是一綑的
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 // 建立 Google 比較挺的 HttpURLConnection 物件
@@ -110,6 +112,7 @@ public class MainActivity extends AppCompatActivity{
                 result = e.toString(); // 如果出事，回傳錯誤訊息
             }
 
+
             // 當這個執行緒完全跑完後執行
             runOnUiThread(new Runnable() {
                 public void run() {
@@ -138,7 +141,16 @@ public class MainActivity extends AppCompatActivity{
             }
             income = input_salary.getText().toString();
             show1.setText(income);
-            startActivity(new Intent(MainActivity.this, fake_data.class));
+           // startActivity(new Intent(MainActivity.this, fake_data.class));
+
+            if(result.equalsIgnoreCase("success\n") ){
+                startActivity(new Intent(MainActivity.this, fake_data.class));
+            }
+            else
+                Log.d("TAG", "update fall ");
+                Log.d("TAG", result);
+                Log.i("tag", String.valueOf(result.equalsIgnoreCase("success") ));
+
         }
     };
 }
