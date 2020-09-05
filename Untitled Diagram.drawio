@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2020-09-05T20:10:58.366Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" etag="vPonoNn54IiPBQLXpAT_" version="13.6.6" type="github">
+<mxfile host="app.diagrams.net" modified="2020-09-05T20:20:37.161Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.135 Safari/537.36" etag="bdX-Tplz9zYG6Un7zCJP" version="13.6.6" type="github">
   <diagram id="WoF5ZmT5TutVCkL6loxM" name="Page-1">
-    <mxGraphModel dx="1316" dy="311" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1834" dy="598" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -49,7 +49,7 @@
         <mxCell id="FRtovLbCStBQHOzKUFMC-5" value="伺服器XAMPP" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-281.75" y="60" width="83.5" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="FRtovLbCStBQHOzKUFMC-6" value="查看資料庫是否要更新API (PHP)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+        <mxCell id="FRtovLbCStBQHOzKUFMC-6" value="確保資料庫最新API&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="-300" y="240" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="FRtovLbCStBQHOzKUFMC-7" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" parent="1" source="VNFoR2ObTazX-s3HmkAG-3" target="FRtovLbCStBQHOzKUFMC-6" edge="1">
@@ -67,14 +67,8 @@
         <mxCell id="FRtovLbCStBQHOzKUFMC-12" value="資料庫" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="70" y="60" width="67" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="FRtovLbCStBQHOzKUFMC-13" value="" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.002;entryY=0.143;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="FRtovLbCStBQHOzKUFMC-19" target="FRtovLbCStBQHOzKUFMC-11" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-310" y="400" as="sourcePoint" />
-            <mxPoint x="-90" y="270" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="FRtovLbCStBQHOzKUFMC-15" value="更新" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
-          <mxGeometry x="-104.5" y="178" width="67" height="20" as="geometry" />
+          <mxGeometry x="-107.25" y="240" width="67" height="20" as="geometry" />
         </mxCell>
         <mxCell id="FRtovLbCStBQHOzKUFMC-16" value="" style="endArrow=classic;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="1" source="FRtovLbCStBQHOzKUFMC-6" target="VNFoR2ObTazX-s3HmkAG-3" edge="1">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -85,17 +79,8 @@
         <mxCell id="FRtovLbCStBQHOzKUFMC-18" value="Response更新完畢" style="text;html=1;strokeColor=#b85450;fillColor=#f8cecc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-447" y="293" width="77" height="30" as="geometry" />
         </mxCell>
-        <mxCell id="FRtovLbCStBQHOzKUFMC-20" value="" style="endArrow=classic;html=1;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" parent="1" source="FRtovLbCStBQHOzKUFMC-6" target="FRtovLbCStBQHOzKUFMC-19" edge="1">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="-250" y="290" as="sourcePoint" />
-            <mxPoint x="-200" y="240" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="FRtovLbCStBQHOzKUFMC-21" value="是,Request" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
           <mxGeometry x="-238" y="312" width="67" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="FRtovLbCStBQHOzKUFMC-19" value="爬蟲API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
-          <mxGeometry x="-300" y="140" width="120" height="50" as="geometry" />
         </mxCell>
         <mxCell id="W2er6BLF-ta4w28NbpeV-1" value="分析API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
           <mxGeometry x="-300" y="350" width="120" height="60" as="geometry" />
@@ -141,48 +126,6 @@
         </mxCell>
         <mxCell id="JFq6KsMxWo-ai3jtECya-4" value="傳送推薦信用卡資料集(陣列結構)到下服務" style="shape=callout;whiteSpace=wrap;html=1;perimeter=calloutPerimeter;position2=0.75;size=40;position=0.33;base=14;direction=north;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" parent="1" vertex="1">
           <mxGeometry x="-715" y="375" width="133" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="JFq6KsMxWo-ai3jtECya-6" value="&lt;a href=&quot;https://givemepass.blogspot.com/2011/12/http-server.html&quot;&gt;如何傳送API需求至伺服器&lt;/a&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-530" y="230" width="127" height="46.5" as="geometry" />
-        </mxCell>
-        <mxCell id="JFq6KsMxWo-ai3jtECya-7" value="&lt;a href=&quot;https://igouist.github.io/post/201912-android-fetch-mysql-using-xampp/&quot;&gt;如何架設伺服器和資料庫&lt;/a&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-200" y="90" width="120" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="JFq6KsMxWo-ai3jtECya-9" value="&lt;a href=&quot;https://medium.com/pierceshih/%E7%AD%86%E8%A8%98-%E4%BD%95%E8%AC%82%E8%B3%87%E6%96%99%E5%BA%AB%E7%B3%BB%E7%B5%B1-53b59aacbfb7&quot;&gt;資料庫是什麼?&lt;/a&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-40" y="100" width="120" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="JFq6KsMxWo-ai3jtECya-10" value="&lt;a href=&quot;https://kknews.cc/zh-tw/tech/qex5j8.html&quot;&gt;如何一步一步爬網頁概念&lt;/a&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-238" y="375" width="133.5" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="bdRmtSucAfaKWC_nttk2-1" value="&lt;a href=&quot;https://codertw.com/%E9%96%8B%E7%99%BC%E8%AA%9E%E8%A8%80/113/&quot;&gt;PHP操作 python程式&lt;/a&gt;2" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-370" y="460" width="133.5" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="Ms80HNmhcPzy2Ck67E_E-1" value="&lt;a href=&quot;https://wiki.mcneel.com/zh-tw/zoo/window7firewall&quot;&gt;打開本地port 80 以提供連線&lt;/a&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-433.5" y="80" width="133.5" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="Ms80HNmhcPzy2Ck67E_E-2" value="&lt;a href=&quot;https://colinchu.pixnet.net/blog/post/107902939&quot;&gt;phpmyadmin外部連線修改工作&lt;/a&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-433.5" y="140" width="133.5" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="Ms80HNmhcPzy2Ck67E_E-3" value="&lt;a href=&quot;https://thumbb13555.pixnet.net/blog/post/325387050-okhttp&quot;&gt;android studio 使用okhttp連接網路伺服器&lt;/a&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="210" y="650" width="123.5" height="57" as="geometry" />
-        </mxCell>
-        <mxCell id="Ms80HNmhcPzy2Ck67E_E-6" value="&lt;a href=&quot;https://zhuanlan.zhihu.com/p/34343228&quot;&gt;教學&lt;/a&gt;" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="1" vertex="1">
-          <mxGeometry x="-220" y="410" width="133.5" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="lGjISzWLSkrpWHws6opk-1" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="-637" y="600" width="200" height="390" as="geometry" />
-        </mxCell>
-        <mxCell id="lGjISzWLSkrpWHws6opk-2" value="伺服器XAMPP" style="text;html=1;strokeColor=#d79b00;fillColor=#ffe6cc;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
-          <mxGeometry x="-578.75" y="550" width="83.5" height="20" as="geometry" />
-        </mxCell>
-        <mxCell id="lGjISzWLSkrpWHws6opk-3" value="查看資料庫是否要更新API (PHP)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="-597" y="730" width="120" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="lGjISzWLSkrpWHws6opk-8" value="爬蟲API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="-597" y="630" width="120" height="50" as="geometry" />
-        </mxCell>
-        <mxCell id="lGjISzWLSkrpWHws6opk-9" value="分析API" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="-597" y="840" width="120" height="60" as="geometry" />
         </mxCell>
         <mxCell id="lGjISzWLSkrpWHws6opk-38" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" edge="1" parent="1" source="lGjISzWLSkrpWHws6opk-16">
           <mxGeometry relative="1" as="geometry">
@@ -273,6 +216,15 @@
         </mxCell>
         <mxCell id="lGjISzWLSkrpWHws6opk-54" value="&lt;font color=&quot;#ff3333&quot;&gt;5&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#00FF80;" vertex="1" parent="1">
           <mxGeometry x="-243.25" y="858.5" width="23" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="lGjISzWLSkrpWHws6opk-56" value="" style="endArrow=classic;startArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="FRtovLbCStBQHOzKUFMC-6">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="-180" y="380" as="sourcePoint" />
+            <mxPoint x="-2" y="270" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="-90" y="270" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
