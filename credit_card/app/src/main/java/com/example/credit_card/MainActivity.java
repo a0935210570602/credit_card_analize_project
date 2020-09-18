@@ -26,7 +26,8 @@ public class MainActivity extends AppCompatActivity{
     RadioGroup funcGroup, location_foreign;
     CheckBox chk;
     int[] id = {R.id.checkBox1, R.id.checkBox2, R.id.checkBox3, R.id.checkBox4, R.id.checkBox5, R.id.checkBox6
-            , R.id.checkBox7, R.id.checkBox8, R.id.checkBox9, R.id.checkBox10, R.id.checkBox11, R.id.checkBox12};
+            , R.id.checkBox7, R.id.checkBox8, R.id.checkBox9, R.id.checkBox10, R.id.checkBox11, R.id.checkBox12
+            , R.id.checkBox13, R.id.checkBox14, R.id.checkBox15, R.id.checkBox16};
     EditText input_salary;
     String income;
     Button send_out;
