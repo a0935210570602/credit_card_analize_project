@@ -66,13 +66,14 @@ public class MainActivity extends AppCompatActivity{
         });
     }
 
-    int money_redp;
-    int in_loc_fore;
+    int money, redpoint = 0;
+    int domestic, forign = 0;
+
+    int convient_store,
     ArrayList<String> sel = new ArrayList<>();
 
     private Runnable mutiThread = new Runnable(){
-        public void run()
-        {
+        public void run() {
             try {
                 URL url = new URL("http://192.168.0.103/test/is_data_the_last.php");
                 // 開始宣告 HTTP 連線需要的物件，這邊通常都是一綑的
@@ -88,8 +89,8 @@ public class MainActivity extends AppCompatActivity{
                 int responseCode =
                         connection.getResponseCode();
                 // 建立取得回應的物件
-                if(responseCode ==
-                        HttpURLConnection.HTTP_OK){
+                if (responseCode ==
+                        HttpURLConnection.HTTP_OK) {
                     // 如果 HTTP 回傳狀態是 OK ，而不是 Error
                     InputStream inputStream =
                             connection.getInputStream();
@@ -98,7 +99,7 @@ public class MainActivity extends AppCompatActivity{
                     // 讀取輸入串流的資料
                     String box = ""; // 宣告存放用字串
                     String line = null; // 宣告讀取用的字串
-                    while((line = bufReader.readLine()) != null) {
+                    while ((line = bufReader.readLine()) != null) {
                         box += line + "\n";
                         // 每當讀取出一列，就加到存放字串後面
                     }
@@ -109,7 +110,7 @@ public class MainActivity extends AppCompatActivity{
                 // 取得資料後想用不同的格式
                 // 例如 Json 等等，都是在這一段做處理
 
-            } catch(Exception e) {
+            } catch (Exception e) {
                 result = e.toString(); // 如果出事，回傳錯誤訊息
             }
 
@@ -121,17 +122,29 @@ public class MainActivity extends AppCompatActivity{
                 }
             });
 
-            if(funcGroup.getCheckedRadioButtonId() == R.id.radioButton1)
-                money_redp = 1;
-            else if(funcGroup.getCheckedRadioButtonId() == R.id.radioButton2)
-                money_redp = 2;
+            switch (funcGroup.getCheckedRadioButtonId()){
+                case R.id.radioButton1:
+                    money = 2;
+                    break;
+                case R.id.radioButton2:
+                    redpoint = 2;
+                    break;
+            }
 
-            if(location_foreign.getCheckedRadioButtonId() == R.id.radioButton5)
-                in_loc_fore = 1;
-            else if(location_foreign.getCheckedRadioButtonId() == R.id.radioButton6)
-                in_loc_fore = 2;
-            else if(location_foreign.getCheckedRadioButtonId() == R.id.radioButton7)
-                in_loc_fore = 3;
+
+            switch (location_foreign.getCheckedRadioButtonId()){
+                case R.id.radioButton5:
+                    domestic = 2;
+                    break;
+                case R.id.radioButton6:
+                    forign = 2;
+                    break;
+                case R.id.radioButton7:
+                    domestic = 1;
+                    forign = 1;
+                    break;
+            }
+
 
             for(int i:id){
                 chk = findViewById(i);
@@ -140,8 +153,11 @@ public class MainActivity extends AppCompatActivity{
                 else
                     sel.remove(chk.getText());
             }
+
             income = input_salary.getText().toString();
             show1.setText(income);
+
+            
            // startActivity(new Intent(MainActivity.this, fake_data.class));
 
             if(result.equalsIgnoreCase("success\n") ){
