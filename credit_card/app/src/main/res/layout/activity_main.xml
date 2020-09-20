@@ -104,6 +104,7 @@
                     android:id="@+id/radioButton1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:shadowColor="#CA0505"
                     android:text="現金回饋"
                     android:textColor="#FFFFFF"
@@ -115,7 +116,16 @@
                     android:id="@+id/radioButton2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_weight="1"
                     android:text="紅利點數回饋"
+                    android:textColor="#FFFFFF" />
+
+                <RadioButton
+                    android:id="@+id/radioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="皆可"
                     android:textColor="#FFFFFF" />
 
             </RadioGroup>
@@ -201,8 +211,11 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:button="?android:attr/listChoiceIndicatorMultiple"
+                    android:shadowColor="#FFFFFF"
                     android:text="超商"
-                    android:textColor="#FBFBFB" />
+                    android:textColor="#FBFBFB"
+                    android:textColorHighlight="#FF0000"
+                    android:textColorLink="#FF0000" />
 
                 <CheckBox
                     android:id="@+id/checkBox2"
@@ -210,7 +223,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="量販店"
-                    android:textColor="#FBFAFA" />
+                    android:textColor="#FBFAFA"
+                    android:textColorHighlight="#FF0000"
+                    android:textColorLink="#FF0000" />
 
                 <CheckBox
                     android:id="@+id/checkBox3"
@@ -218,7 +233,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="餐廳"
-                    android:textColor="#FBFAFA" />
+                    android:textColor="#FBFAFA"
+                    android:textColorHighlight="#FF0000"
+                    android:textColorLink="#FF0000" />
 
                 <CheckBox
                     android:id="@+id/checkBox4"
@@ -226,7 +243,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="電影"
-                    android:textColor="#FBFAFA" />
+                    android:textColor="#FBFAFA"
+                    android:textColorHighlight="#FF0000"
+                    android:textColorLink="#FF0000" />
 
             </LinearLayout>
 
@@ -241,7 +260,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="加油"
-                    android:textColor="@android:color/background_light" />
+                    android:textColor="@android:color/background_light"
+                    android:textColorHighlight="#FF0000"
+                    android:textColorLink="#FF0000" />
 
                 <CheckBox
                     android:id="@+id/checkBox14"
@@ -249,7 +270,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="網購"
-                    android:textColor="@android:color/background_light" />
+                    android:textColor="@android:color/background_light"
+                    android:textColorHighlight="#FF0000"
+                    android:textColorLink="#FF0000" />
 
                 <CheckBox
                     android:id="@+id/checkBox15"
@@ -257,7 +280,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="首刷禮"
-                    android:textColor="@android:color/background_light" />
+                    android:textColor="@android:color/background_light"
+                    android:textColorHighlight="#FF0000"
+                    android:textColorLink="#FF0000" />
 
                 <CheckBox
                     android:id="@+id/checkBox16"
@@ -265,7 +290,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="繳保費"
-                    android:textColor="@android:color/background_light" />
+                    android:textColor="@android:color/background_light"
+                    android:textColorHighlight="#FF0000"
+                    android:textColorLink="#FF0000" />
             </LinearLayout>
 
             <LinearLayout
@@ -280,7 +307,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="繳費(水電...)"
-                    android:textColor="#FDFCFC" />
+                    android:textColor="#FDFCFC"
+                    android:textColorHighlight="#FF0000"
+                    android:textColorLink="#FF0000" />
 
                 <CheckBox
                     android:id="@+id/checkBox6"
@@ -288,7 +317,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="飛行"
-                    android:textColor="#FDFCFC" />
+                    android:textColor="#FDFCFC"
+                    android:textColorHighlight="#FF0000"
+                    android:textColorLink="#FF0000" />
 
                 <CheckBox
                     android:id="@+id/checkBox7"
@@ -296,7 +327,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="飲料店"
-                    android:textColor="#FDFCFC" />
+                    android:textColor="#FDFCFC"
+                    android:textColorHighlight="#FF0000"
+                    android:textColorLink="#FF0000" />
 
                 <CheckBox
                     android:id="@+id/checkBox8"
@@ -304,7 +337,9 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="百貨公司"
-                    android:textColor="#FDFCFC" />
+                    android:textColor="#FDFCFC"
+                    android:textColorHighlight="#FF0000"
+                    android:textColorLink="#FF0000" />
 
             </LinearLayout>
 
@@ -316,34 +351,42 @@
                 <CheckBox
                     android:id="@+id/checkBox9"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="通勤"
-                    android:textColor="#FDFBFB" />
+                    android:textColor="#FDFBFB"
+                    android:textColorHighlight="#FF0000"
+                    android:textColorLink="#FF0000" />
 
                 <CheckBox
                     android:id="@+id/checkBox10"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="聯名卡"
-                    android:textColor="#FAF6F6" />
+                    android:textColor="#FAF6F6"
+                    android:textColorHighlight="#FF0000"
+                    android:textColorLink="#FF0000" />
 
                 <CheckBox
                     android:id="@+id/checkBox11"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="無腦刷"
-                    android:textColor="#FAF6F6" />
+                    android:textColor="#FAF6F6"
+                    android:textColorHighlight="#FF0000"
+                    android:textColorLink="#FF0000" />
 
                 <CheckBox
                     android:id="@+id/checkBox12"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="額外加碼活動"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#FF0000"
+                    android:textColorLink="#FF0000" />
 
                 <TextView
                     android:id="@+id/textView14"
@@ -351,6 +394,12 @@
                     android:layout_height="match_parent"
                     android:textSize="30sp" />
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp" />
 
             <LinearLayout
                 android:layout_width="match_parent"

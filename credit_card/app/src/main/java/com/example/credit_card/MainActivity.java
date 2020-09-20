@@ -20,6 +20,8 @@ import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class MainActivity extends AppCompatActivity{
 
@@ -69,13 +71,13 @@ public class MainActivity extends AppCompatActivity{
     int money, redpoint = 0;
     int domestic, forign = 0;
 
-    int convient_store,
-    ArrayList<String> sel = new ArrayList<>();
+    Map<String, Integer> find = new HashMap<>();
+    Map<String, Integer> sel = new HashMap<>();
 
     private Runnable mutiThread = new Runnable(){
         public void run() {
             try {
-                URL url = new URL("http://192.168.0.103/test/is_data_the_last.php");
+                URL url = new URL("http://192.168.1.58/test.php");
                 // 開始宣告 HTTP 連線需要的物件，這邊通常都是一綑的
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 // 建立 Google 比較挺的 HttpURLConnection 物件
@@ -129,6 +131,9 @@ public class MainActivity extends AppCompatActivity{
                 case R.id.radioButton2:
                     redpoint = 2;
                     break;
+                case R.id.radioButton:
+                    money = 1;
+                    redpoint = 1;
             }
 
 
@@ -145,20 +150,33 @@ public class MainActivity extends AppCompatActivity{
                     break;
             }
 
+            find.put("money", money);
+            find.put("redpoint", redpoint);
+            find.put("domestic", domestic);
+            find.put("foreign", forign);
+
 
             for(int i:id){
                 chk = findViewById(i);
                 if(chk.isChecked())
-                    sel.add((String) chk.getText());
+                    sel.put((String) chk.getText(), 1);
                 else
-                    sel.remove(chk.getText());
+                    sel.put((String) chk.getText(), 0);
             }
 
             income = input_salary.getText().toString();
             show1.setText(income);
 
-            
-           // startActivity(new Intent(MainActivity.this, fake_data.class));
+            // 檢查選擇的職有無正常抓取
+            for (Map.Entry<String, Integer> entry : find.entrySet()) {
+                System.out.println(entry);
+            }
+
+            for (Map.Entry<String, Integer> entry : sel.entrySet()) {
+                System.out.println(entry);
+            }
+
+            startActivity(new Intent(MainActivity.this, fake_data.class));
 
             if(result.equalsIgnoreCase("success\n") ){
                 startActivity(new Intent(MainActivity.this, fake_data.class));
