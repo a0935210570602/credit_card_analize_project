@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity{
     int[] id = {R.id.checkBox1, R.id.checkBox2, R.id.checkBox3, R.id.checkBox4, R.id.checkBox5, R.id.checkBox6
             , R.id.checkBox7, R.id.checkBox8, R.id.checkBox9, R.id.checkBox10, R.id.checkBox11, R.id.checkBox12
             , R.id.checkBox13, R.id.checkBox14, R.id.checkBox15, R.id.checkBox16};
-    EditText input_salary;
+    EditText input_salary, year_fee;
     String income;
     Button send_out;
     TextView show, show1;
@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity{
         location_foreign = findViewById(R.id.loc_for);
         show = findViewById(R.id.show);
         show1 = findViewById(R.id.show1);
+        year_fee = findViewById(R.id.year_fee);
 
 //        for(int i=1;i<12;i++){
 //            String radioID = "checkBox" + i;
@@ -68,11 +69,12 @@ public class MainActivity extends AppCompatActivity{
         });
     }
 
-    int money, redpoint = 0;
-    int domestic, forign = 0;
+    int base_point = 10;
+    int redpoint_money, redpoint_mile, point_mutiple, first_mile_back, forign_cost_mile, domestic_cost_mile, digital_cost_mile, digital_bak_max,
+        internet_cost, year_cost, week_movie, workday_movie, gas_money, gas_discount, forign_money_back, domestic_money_back = 1;
+    String card_price;
 
     Map<String, Integer> find = new HashMap<>();
-    Map<String, Integer> sel = new HashMap<>();
 
     private Runnable mutiThread = new Runnable(){
         public void run() {
@@ -126,53 +128,217 @@ public class MainActivity extends AppCompatActivity{
 
             switch (funcGroup.getCheckedRadioButtonId()){
                 case R.id.radioButton1:
-                    money = 2;
+                    domestic_money_back += 20;
+                    forign_money_back += 20;
+                    internet_cost += 3;
+                    gas_money += 3;
+                    year_cost += 2;
                     break;
                 case R.id.radioButton2:
-                    redpoint = 2;
+                    redpoint_money += 20;
+                    redpoint_mile += 5;
+                    point_mutiple += 3;
+                    internet_cost += 3;
+                    year_cost += 2;
                     break;
                 case R.id.radioButton:
-                    money = 1;
-                    redpoint = 1;
+                    domestic_money_back += 10;
+                    redpoint_money += 10;
+                    break;
             }
 
 
             switch (location_foreign.getCheckedRadioButtonId()){
                 case R.id.radioButton5:
-                    domestic = 2;
+                    domestic_money_back += 20;
                     break;
                 case R.id.radioButton6:
-                    forign = 2;
+                    forign_money_back += 20;
                     break;
                 case R.id.radioButton7:
-                    domestic = 1;
-                    forign = 1;
+                    domestic_money_back += 10;
+                    forign_money_back += 10;
                     break;
             }
-
-            find.put("money", money);
-            find.put("redpoint", redpoint);
-            find.put("domestic", domestic);
-            find.put("foreign", forign);
-
 
             for(int i:id){
                 chk = findViewById(i);
-                if(chk.isChecked())
-                    sel.put((String) chk.getText(), 1);
-                else
-                    sel.put((String) chk.getText(), 0);
+                switch (chk.getId()){
+                    case R.id.checkBox1:
+                        if (chk.isChecked()){
+                            domestic_money_back += 5;
+                            redpoint_money += 5;
+                            break;
+                        }
+                    case R.id.checkBox2:
+                        if (chk.isChecked()) {
+                            domestic_money_back += 5;
+                            forign_money_back += 5;
+                            redpoint_money += 5;
+                            first_mile_back += 2;
+                            domestic_cost_mile += 2;
+                            forign_cost_mile += 2;
+                            break;
+                        }
+                    case R.id.checkBox3:
+                        if (chk.isChecked()){
+                            domestic_money_back += 5;
+                            forign_money_back += 5;
+                            redpoint_money += 5;
+                            first_mile_back += 2;
+                            break;
+                        }
+                    case R.id.checkBox4:
+                        if (chk.isChecked()){
+                            domestic_money_back += 2;
+                            forign_money_back += 2;
+                            week_movie += 20;
+                            workday_movie += 15;
+                            redpoint_money += 2;
+                            first_mile_back += 2;
+                            point_mutiple += 2;
+                            break;
+                        }
+                    case R.id.checkBox13:
+                        if (chk.isChecked()){
+                            gas_money += 20;
+                            gas_discount += 20;
+                            domestic_money_back += 2;
+                            forign_money_back += 2;
+                            redpoint_money += 2;
+                            first_mile_back += 2;
+                            point_mutiple += 3;
+                            break;
+                        }
+                    case R.id.checkBox14:
+                        if (chk.isChecked()){
+                            internet_cost += 20;
+                            digital_bak_max += 10;
+                            digital_cost_mile += 10;
+                            domestic_money_back += 2;
+                            forign_money_back += 2;
+                            redpoint_money += 2;
+                            first_mile_back += 2;
+                            point_mutiple += 5;
+                            break;
+                        }
+                    case R.id.checkBox15:
+                        if (chk.isChecked()){
+                            year_cost += 5;
+                            domestic_money_back += 1;
+                            forign_money_back += 1;
+                            redpoint_money += 1;
+                            first_mile_back += 10;
+                            break;
+                        }
+                    case R.id.checkBox16:
+                        if (chk.isChecked()){
+                            domestic_money_back += 10;
+                            forign_money_back += 8;
+                            redpoint_money += 10;
+                            break;
+                        }
+                    case R.id.checkBox5:
+                        if (chk.isChecked()){
+                            domestic_money_back += 10;
+                            forign_money_back += 6;
+                            redpoint_money += 10;
+                            break;
+                        }
+                    case R.id.checkBox6:
+                        if (chk.isChecked()){
+                            redpoint_mile += 15;
+                            redpoint_money += 20;
+                            forign_cost_mile += 6;
+                            domestic_cost_mile += 6;
+                            domestic_money_back += 2;
+                            forign_money_back += 2;
+                            redpoint_money += 2;
+                            break;
+                        }
+                    case R.id.checkBox7:
+                        if (chk.isChecked()){
+                            domestic_money_back += 2;
+                            forign_money_back += 2;
+                            redpoint_money += 5;
+                            break;
+                        }
+                    case R.id.checkBox8:
+                        if (chk.isChecked()){
+                            domestic_money_back += 10;
+                            domestic_cost_mile += 8;
+                            forign_money_back += 10;
+                            forign_cost_mile += 8;
+                            redpoint_money += 10;
+                            redpoint_mile += 4;
+                            break;
+                        }
+                    case R.id.checkBox9:
+                        if (chk.isChecked()){
+                            gas_discount += 20;
+                            gas_money += 20;
+                            redpoint_mile += 5;
+                            first_mile_back += 5;
+                            domestic_money_back += 2;
+                            forign_money_back += 2;
+                            redpoint_money += 2;
+                            break;
+                        }
+                    case R.id.checkBox10:
+                        if (chk.isChecked()){
+                            domestic_money_back += 10;
+                            forign_money_back += 8;
+                            redpoint_money += 10;
+                            internet_cost += 10;
+                            point_mutiple += 10;
+                            break;
+                        }
+                    case R.id.checkBox11:
+                        if (chk.isChecked()){
+                            domestic_money_back += 15;
+                            forign_money_back += 10;
+                            redpoint_money += 15;
+                            internet_cost += 10;
+                            gas_money += 5;
+                            gas_discount += 5;
+                            break;
+                        }
+                    case R.id.checkBox12:
+                        if (chk.isChecked()){
+                            domestic_money_back += 5;
+                            forign_money_back += 5;
+                            redpoint_money += 5;
+                            internet_cost +=5;
+                            break;
+                        }
+                }
             }
+
+            find.put("redpoint_money", redpoint_money);
+            find.put("redpoint_mile", redpoint_mile);
+            find.put("point_mutiple", point_mutiple);
+            find.put("first_mile_back", first_mile_back);
+            find.put("forign_cost_mile", forign_cost_mile);
+            find.put("domestic_cost_mile", domestic_cost_mile);
+            find.put("digital_bak_max", digital_bak_max);
+            find.put("internet_cost", internet_cost);
+            find.put("year_cost", year_cost);
+            find.put("week_movie", week_movie);
+            find.put("gas_money", gas_money);
+            find.put("workday_movie", workday_movie);
+            find.put("gas_discount", gas_discount);
+            find.put("forign_money_back", forign_money_back);
+            find.put("domestic_money_back", domestic_money_back);
+            find.put("digital_cost_mile", digital_cost_mile);
+
 
             income = input_salary.getText().toString();
             show1.setText(income);
 
+            card_price = year_fee.getText().toString();
+
             // 檢查選擇的職有無正常抓取
             for (Map.Entry<String, Integer> entry : find.entrySet()) {
-                System.out.println(entry);
-            }
-
-            for (Map.Entry<String, Integer> entry : sel.entrySet()) {
                 System.out.println(entry);
             }
 
