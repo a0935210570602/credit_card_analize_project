@@ -4,13 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
     <ScrollView
         android:id="@+id/scrollView2"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#201F1F"
+        android:background="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -105,20 +107,17 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:shadowColor="#CA0505"
                     android:text="現金回饋"
                     android:textColor="#FFFFFF"
-                    android:textColorHighlight="#9F1010"
-                    android:textColorHint="#FFFFFF"
-                    android:textColorLink="#B80000" />
-
+                    android:buttonTint="@color/red"/>
                 <RadioButton
                     android:id="@+id/radioButton2"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="紅利點數回饋"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="@color/red"/>
 
                 <RadioButton
                     android:id="@+id/radioButton"
@@ -126,7 +125,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="皆可"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="@color/red"/>
 
             </RadioGroup>
 
@@ -166,7 +166,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="國內消費"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="@color/red"/>
 
                 <RadioButton
                     android:id="@+id/radioButton6"
@@ -174,7 +175,8 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="國外消費"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="@color/red"/>
 
                 <RadioButton
                     android:id="@+id/radioButton7"
@@ -183,7 +185,8 @@
                     android:layout_weight="1"
                     android:shadowColor="#FFFFFF"
                     android:text="通用"
-                    android:textColor="#FFFFFF" />
+                    android:textColor="#FFFFFF"
+                    android:buttonTint="@color/red"/>
             </RadioGroup>
 
             <TextView
@@ -214,8 +217,7 @@
                     android:shadowColor="#FFFFFF"
                     android:text="超商"
                     android:textColor="#FBFBFB"
-                    android:textColorHighlight="#FF0000"
-                    android:textColorLink="#FF0000" />
+                    android:buttonTint="@color/red"/>
 
                 <CheckBox
                     android:id="@+id/checkBox2"
@@ -224,8 +226,7 @@
                     android:layout_weight="1"
                     android:text="量販店"
                     android:textColor="#FBFAFA"
-                    android:textColorHighlight="#FF0000"
-                    android:textColorLink="#FF0000" />
+                    android:buttonTint="@color/red"/>
 
                 <CheckBox
                     android:id="@+id/checkBox3"
@@ -234,8 +235,7 @@
                     android:layout_weight="1"
                     android:text="餐廳"
                     android:textColor="#FBFAFA"
-                    android:textColorHighlight="#FF0000"
-                    android:textColorLink="#FF0000" />
+                    android:buttonTint="@color/red"/>
 
                 <CheckBox
                     android:id="@+id/checkBox4"
@@ -244,8 +244,7 @@
                     android:layout_weight="1"
                     android:text="電影"
                     android:textColor="#FBFAFA"
-                    android:textColorHighlight="#FF0000"
-                    android:textColorLink="#FF0000" />
+                    android:buttonTint="@color/red"/>
 
             </LinearLayout>
 
@@ -261,8 +260,7 @@
                     android:layout_weight="1"
                     android:text="加油"
                     android:textColor="@android:color/background_light"
-                    android:textColorHighlight="#FF0000"
-                    android:textColorLink="#FF0000" />
+                    android:buttonTint="@color/red"/>
 
                 <CheckBox
                     android:id="@+id/checkBox14"
@@ -271,8 +269,7 @@
                     android:layout_weight="1"
                     android:text="網購"
                     android:textColor="@android:color/background_light"
-                    android:textColorHighlight="#FF0000"
-                    android:textColorLink="#FF0000" />
+                    android:buttonTint="@color/red"/>
 
                 <CheckBox
                     android:id="@+id/checkBox15"
@@ -281,8 +278,7 @@
                     android:layout_weight="1"
                     android:text="首刷禮"
                     android:textColor="@android:color/background_light"
-                    android:textColorHighlight="#FF0000"
-                    android:textColorLink="#FF0000" />
+                    android:buttonTint="@color/red"/>
 
                 <CheckBox
                     android:id="@+id/checkBox16"
@@ -291,8 +287,7 @@
                     android:layout_weight="1"
                     android:text="繳保費"
                     android:textColor="@android:color/background_light"
-                    android:textColorHighlight="#FF0000"
-                    android:textColorLink="#FF0000" />
+                    android:buttonTint="@color/red"/>
             </LinearLayout>
 
             <LinearLayout
@@ -308,8 +303,7 @@
                     android:layout_weight="1"
                     android:text="繳費(水電...)"
                     android:textColor="#FDFCFC"
-                    android:textColorHighlight="#FF0000"
-                    android:textColorLink="#FF0000" />
+                    android:buttonTint="@color/red"/>
 
                 <CheckBox
                     android:id="@+id/checkBox6"
@@ -318,8 +312,7 @@
                     android:layout_weight="1"
                     android:text="飛行"
                     android:textColor="#FDFCFC"
-                    android:textColorHighlight="#FF0000"
-                    android:textColorLink="#FF0000" />
+                    android:buttonTint="@color/red"/>
 
                 <CheckBox
                     android:id="@+id/checkBox7"
@@ -328,8 +321,7 @@
                     android:layout_weight="1"
                     android:text="飲料店"
                     android:textColor="#FDFCFC"
-                    android:textColorHighlight="#FF0000"
-                    android:textColorLink="#FF0000" />
+                    android:buttonTint="@color/red"/>
 
                 <CheckBox
                     android:id="@+id/checkBox8"
@@ -338,8 +330,7 @@
                     android:layout_weight="1"
                     android:text="百貨公司"
                     android:textColor="#FDFCFC"
-                    android:textColorHighlight="#FF0000"
-                    android:textColorLink="#FF0000" />
+                    android:buttonTint="@color/red"/>
 
             </LinearLayout>
 
@@ -355,8 +346,7 @@
                     android:layout_weight="1"
                     android:text="通勤"
                     android:textColor="#FDFBFB"
-                    android:textColorHighlight="#FF0000"
-                    android:textColorLink="#FF0000" />
+                    android:buttonTint="@color/red"/>
 
                 <CheckBox
                     android:id="@+id/checkBox10"
@@ -365,8 +355,7 @@
                     android:layout_weight="1"
                     android:text="聯名卡"
                     android:textColor="#FAF6F6"
-                    android:textColorHighlight="#FF0000"
-                    android:textColorLink="#FF0000" />
+                    android:buttonTint="@color/red"/>
 
                 <CheckBox
                     android:id="@+id/checkBox11"
@@ -375,8 +364,7 @@
                     android:layout_weight="1"
                     android:text="無腦刷"
                     android:textColor="#FAF6F6"
-                    android:textColorHighlight="#FF0000"
-                    android:textColorLink="#FF0000" />
+                    android:buttonTint="@color/red"/>
 
                 <CheckBox
                     android:id="@+id/checkBox12"
@@ -385,8 +373,7 @@
                     android:layout_weight="1"
                     android:text="額外加碼活動"
                     android:textColor="#FFFFFF"
-                    android:textColorHighlight="#FF0000"
-                    android:textColorLink="#FF0000" />
+                    android:buttonTint="@color/red"/>
 
                 <TextView
                     android:id="@+id/textView14"
@@ -401,31 +388,38 @@
                 android:layout_height="wrap_content"
                 android:textSize="24sp" />
 
-            <LinearLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/textView15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:text="4.個人年收入(單位:萬):"
-                    android:textColor="#FFFFFF"
-                    android:textSize="24sp" />
-
-                <EditText
+                <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/input_salary"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:gravity="center_horizontal"
-                    android:inputType="phone"
-                    android:textColor="#FFFFFF" />
+                    android:hint="4.輸入年收入(單位:萬)"
+                    android:singleLine="true"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textColorHint="@color/cardview_light_background"
+                    android:textCursorDrawable="@color/design_default_color_surface"
+                    android:textSize="24sp" />
+            </com.google.android.material.textfield.TextInputLayout>
 
-            </LinearLayout>
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/year_fee"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="5.可接受最高年費"
+                    android:singleLine="true"
+                    android:textColor="#FFFFFF"
+                    android:textColorHighlight="#FFFFFF"
+                    android:textSize="24sp"
+                    android:theme="@style/AppTheme" />
+            </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
                 android:id="@+id/textView16"
@@ -433,37 +427,14 @@
                 android:layout_height="wrap_content"
                 android:textSize="36sp" />
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <TextView
-                    android:id="@+id/textView19"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="5.可接受最高年費:"
-                    android:textColor="#FFFFFF"
-                    android:textSize="24sp" />
-
-                <EditText
-                    android:id="@+id/year_fee"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:ems="10"
-                    android:inputType="phone"
-                    android:textColor="#FFFFFF" />
-            </LinearLayout>
-
             <Button
                 android:id="@+id/send_out"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:onClick="send"
+                android:background="@drawable/btn_all_shape"
                 android:text="資料送出"
+                android:textColor="#FFFFFF"
                 tools:layout_editor_absoluteY="1021dp" />
 
             <TextView

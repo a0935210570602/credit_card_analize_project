@@ -4,22 +4,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.Editable;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
-import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+//import com.google.android.material.textfield.TextInputEditText;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -30,7 +28,7 @@ public class MainActivity extends AppCompatActivity{
     int[] id = {R.id.checkBox1, R.id.checkBox2, R.id.checkBox3, R.id.checkBox4, R.id.checkBox5, R.id.checkBox6
             , R.id.checkBox7, R.id.checkBox8, R.id.checkBox9, R.id.checkBox10, R.id.checkBox11, R.id.checkBox12
             , R.id.checkBox13, R.id.checkBox14, R.id.checkBox15, R.id.checkBox16};
-    EditText input_salary, year_fee;
+//    TextInputEditText input_salary, year_fee;
     String income;
     Button send_out;
     TextView show, show1;
@@ -45,14 +43,14 @@ public class MainActivity extends AppCompatActivity{
         location_foreign = findViewById(R.id.loc_for);
         show = findViewById(R.id.show);
         show1 = findViewById(R.id.show1);
-        year_fee = findViewById(R.id.year_fee);
+//        year_fee = findViewById(R.id.year_fee);
 
 //        for(int i=1;i<12;i++){
 //            String radioID = "checkBox" + i;
 //            chk[i] = findViewById(this.getResources().getIdentifier(radioID, "id", getPackageName()));
 //        }
 
-        input_salary = findViewById(R.id.input_salary);
+//        input_salary = findViewById(R.id.input_salary);
         send_out = findViewById(R.id.send_out);
         send_out.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -332,10 +330,10 @@ public class MainActivity extends AppCompatActivity{
             find.put("digital_cost_mile", digital_cost_mile);
 
 
-            income = input_salary.getText().toString();
-            show1.setText(income);
+//            income = input_salary.getText().toString();
 
-            card_price = year_fee.getText().toString();
+//            card_price = year_fee.getText().toString();
+            show1.setText(income + " " + card_price);
 
             // 檢查選擇的職有無正常抓取
             for (Map.Entry<String, Integer> entry : find.entrySet()) {
