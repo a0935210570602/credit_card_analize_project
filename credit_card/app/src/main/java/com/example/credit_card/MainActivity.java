@@ -77,7 +77,7 @@ public class MainActivity extends AppCompatActivity{
     private Runnable mutiThread = new Runnable(){
         public void run() {
             try {
-                URL url = new URL("http://192.168.1.58/test.php");
+                URL url = new URL("http://10.122.9.247");
                 // 開始宣告 HTTP 連線需要的物件，這邊通常都是一綑的
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 // 建立 Google 比較挺的 HttpURLConnection 物件
