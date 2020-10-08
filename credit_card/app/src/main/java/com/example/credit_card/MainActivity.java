@@ -1,8 +1,10 @@
 package com.example.credit_card;
 
+import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -16,6 +18,7 @@ import android.widget.TextView;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
 import java.util.HashMap;
@@ -43,6 +46,7 @@ public class MainActivity extends AppCompatActivity{
         location_foreign = findViewById(R.id.loc_for);
         show = findViewById(R.id.show);
         show1 = findViewById(R.id.show1);
+
 //        year_fee = findViewById(R.id.year_fee);
 
 //        for(int i=1;i<12;i++){
@@ -75,9 +79,10 @@ public class MainActivity extends AppCompatActivity{
     Map<String, Integer> find = new HashMap<>();
 
     private Runnable mutiThread = new Runnable(){
+        @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         public void run() {
             try {
-                URL url = new URL("http://192.168.1.58");
+                URL url = new URL("http://192.168.0.101/test/test.php");
                 // 開始宣告 HTTP 連線需要的物件，這邊通常都是一綑的
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 // 建立 Google 比較挺的 HttpURLConnection 物件
@@ -86,6 +91,18 @@ public class MainActivity extends AppCompatActivity{
                 connection.setDoOutput(true); // 允許輸出
                 connection.setDoInput(true); // 允許讀入
                 connection.setUseCaches(false); // 不使用快取
+                connection.setReadTimeout(10000);
+                connection.setConnectTimeout(15000);
+             /////////////////////////////////////////////////////////////////////////////////////////
+                connection.setRequestProperty("Content-Type", "application/json; utf-8");          ///
+                connection.setRequestProperty("Accept", "application/json");                       ///
+//                String jsonInputString = "{\"name\": \"Upendra\", \"job\": \"Programmer\"}";     ///
+                String jsonInputString = "8888888888";                                             ///
+                try(OutputStream os = connection.getOutputStream()) {                              ///
+                    byte[] input = jsonInputString.getBytes("utf-8");                 ///
+                    os.write(input, 0, input.length);                                         ///
+                }                                                                                 ///
+            /////////////////////////////////////////////////////////////////////////////////////////
                 connection.connect(); // 開始連線
 
                 int responseCode =
@@ -340,7 +357,7 @@ public class MainActivity extends AppCompatActivity{
                 System.out.println(entry);
             }
 
-            startActivity(new Intent(MainActivity.this, fake_data.class));
+//            startActivity(new Intent(MainActivity.this, fake_data.class));
 
             if(result.equalsIgnoreCase("success\n") ){
                 startActivity(new Intent(MainActivity.this, fake_data.class));
