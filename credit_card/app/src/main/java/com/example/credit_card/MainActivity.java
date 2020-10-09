@@ -89,13 +89,13 @@ public class MainActivity extends AppCompatActivity{
                 connection.setRequestMethod("POST");
                 // 設定連線方式為 POST
                 connection.setDoOutput(true); // 允許輸出
-                connection.setDoInput(true); // 允許讀入
+                connection.setDoInput(true);  // 允許讀入
                 connection.setUseCaches(false); // 不使用快取
                 connection.setReadTimeout(10000);
                 connection.setConnectTimeout(15000);
              /////////////////////////////////////////////////////////////////////////////////////////
                 connection.setRequestProperty("Content-Type", "application/json; utf-8");          ///
-                connection.setRequestProperty("Accept", "application/json");                       ///
+                connection.setRequestProperty("Accept", "application/json");                       ///https://www.baeldung.com/httpurlconnection-post
 //                String jsonInputString = "{\"name\": \"Upendra\", \"job\": \"Programmer\"}";     ///
                 String jsonInputString = "8888888888";                                             ///
                 try(OutputStream os = connection.getOutputStream()) {                              ///
@@ -357,7 +357,7 @@ public class MainActivity extends AppCompatActivity{
                 System.out.println(entry);
             }
 
-//            startActivity(new Intent(MainActivity.this, fake_data.class));
+            startActivity(new Intent(MainActivity.this, fake_data.class));
 
             if(result.equalsIgnoreCase("success\n") ){
                 startActivity(new Intent(MainActivity.this, fake_data.class));
