@@ -118,22 +118,21 @@ public class fake_data extends AppCompatActivity {
         img1.setImageResource(Integer.parseInt(credit_list.get(0).get("圖片")));
         showNO1.setText("銀行 " + credit_list.get(0).get("銀行") + "\n" +
                 "信用卡名 " + credit_list.get(0).get("信用卡名") + "\n" +
-                "使用人數 " + credit_list.get(0).get("使用人數") + "\n");
+                "使用人數 " + credit_list.get(0).get("使用人數"));
         img4.setImageResource(Integer.parseInt(credit_list.get(0).get("星星")));
         bundle1.putString("index", "0");
 
         img2.setImageResource(Integer.parseInt(credit_list.get(1).get("圖片")));
         showNO2.setText("銀行 " + credit_list.get(1).get("銀行") + "\n" +
                 "信用卡名 " + credit_list.get(1).get("信用卡名") + "\n" +
-                "使用人數 " + credit_list.get(1).get("使用人數") + "\n");
+                "使用人數 " + credit_list.get(1).get("使用人數"));
         img5.setImageResource(Integer.parseInt(credit_list.get(1).get("星星")));
         bundle2.putString("index", "1");
-
 
         img3.setImageResource(Integer.parseInt(credit_list.get(2).get("圖片")));
         showNO3.setText("銀行 " + credit_list.get(2).get("銀行") + "\n" +
                 "信用卡名 " + credit_list.get(2).get("信用卡名") + "\n" +
-                "使用人數 " + credit_list.get(2).get("使用人數") + "\n");
+                "使用人數 " + credit_list.get(2).get("使用人數"));
         img6.setImageResource(Integer.parseInt(credit_list.get(2).get("星星")));
         bundle3.putString("index", "2");
 
@@ -178,113 +177,113 @@ public class fake_data extends AppCompatActivity {
                 img1.setImageResource(Integer.parseInt(credit_list.get(3).get("圖片")));
                 showNO1.setText("銀行 " + credit_list.get(3).get("銀行") + "\n" +
                         "信用卡名 " + credit_list.get(3).get("信用卡名") + "\n" +
-                        "使用人數 " + credit_list.get(3).get("使用人數") + "\n");
+                        "使用人數 " + credit_list.get(3).get("使用人數"));
                 img4.setImageResource(Integer.parseInt(credit_list.get(3).get("星星")));
                 bundle1.putString("index", "3");
 
                 img2.setImageResource(Integer.parseInt(credit_list.get(0).get("圖片")));
                 showNO2.setText("銀行 " + credit_list.get(0).get("銀行") + "\n" +
                         "信用卡名 " + credit_list.get(0).get("信用卡名") + "\n" +
-                        "使用人數 " + credit_list.get(0).get("使用人數") + "\n");
+                        "使用人數 " + credit_list.get(0).get("使用人數"));
                 img5.setImageResource(Integer.parseInt(credit_list.get(0).get("星星")));
                 bundle2.putString("index", "0");
 
                 img3.setImageResource(Integer.parseInt(credit_list.get(2).get("圖片")));
                 showNO3.setText("銀行 " + credit_list.get(2).get("銀行") + "\n" +
                         "信用卡名 " + credit_list.get(2).get("信用卡名") + "\n" +
-                        "使用人數 " + credit_list.get(2).get("使用人數") + "\n");
+                        "使用人數 " + credit_list.get(2).get("使用人數"));
                 img6.setImageResource(Integer.parseInt(credit_list.get(2).get("星星")));
-                bundle1.putString("index", "2");
+                bundle3.putString("index", "2");
                 break;
             case 1:
                 img1.setImageResource(Integer.parseInt(credit_list.get(0).get("圖片")));
                 showNO1.setText("銀行 " + credit_list.get(0).get("銀行") + "\n" +
                         "信用卡名 " + credit_list.get(0).get("信用卡名") + "\n" +
-                        "使用人數 " + credit_list.get(0).get("使用人數") + "\n");
+                        "使用人數 " + credit_list.get(0).get("使用人數"));
                 img4.setImageResource(Integer.parseInt(credit_list.get(0).get("星星")));
                 bundle1.putString("index", "0");
 
                 img2.setImageResource(Integer.parseInt(credit_list.get(5).get("圖片")));
                 showNO2.setText("銀行 " + credit_list.get(5).get("銀行") + "\n" +
                     "信用卡名 " + credit_list.get(5).get("信用卡名") + "\n" +
-                    "使用人數 " + credit_list.get(5).get("使用人數") + "\n");
+                    "使用人數 " + credit_list.get(5).get("使用人數"));
                 img5.setImageResource(Integer.parseInt(credit_list.get(5).get("星星")));
-                bundle1.putString("index", "5");
+                bundle2.putString("index", "5");
 
                 img3.setImageResource(Integer.parseInt(credit_list.get(2).get("圖片")));
                 showNO3.setText("銀行 " + credit_list.get(2).get("銀行") + "\n" +
                         "信用卡名 " + credit_list.get(2).get("信用卡名") + "\n" +
-                        "使用人數 " + credit_list.get(2).get("使用人數") + "\n");
+                        "使用人數 " + credit_list.get(2).get("使用人數"));
                 img6.setImageResource(Integer.parseInt(credit_list.get(2).get("星星")));
-                bundle1.putString("index", "2");
+                bundle3.putString("index", "2");
 
                 break;
             case 2:
                 img1.setImageResource(Integer.parseInt(credit_list.get(4).get("圖片")));
                 showNO1.setText("銀行 " + credit_list.get(4).get("銀行") + "\n" +
                         "信用卡名 " + credit_list.get(4).get("信用卡名") + "\n" +
-                        "使用人數 " + credit_list.get(4).get("使用人數") + "\n");
+                        "使用人數 " + credit_list.get(4).get("使用人數"));
                 img4.setImageResource(Integer.parseInt(credit_list.get(4).get("星星")));
                 bundle1.putString("index", "4");
 
                 img2.setImageResource(Integer.parseInt(credit_list.get(3).get("圖片")));
                 showNO2.setText("銀行 " + credit_list.get(3).get("銀行") + "\n" +
                         "信用卡名 " + credit_list.get(3).get("信用卡名") + "\n" +
-                        "使用人數 " + credit_list.get(3).get("使用人數") + "\n");
+                        "使用人數 " + credit_list.get(3).get("使用人數"));
                 img5.setImageResource(Integer.parseInt(credit_list.get(3).get("星星")));
-                bundle1.putString("index", "3");
+                bundle2.putString("index", "3");
 
                 img3.setImageResource(Integer.parseInt(credit_list.get(5).get("圖片")));
                 showNO3.setText("銀行 " + credit_list.get(5).get("銀行") + "\n" +
                         "信用卡名 " + credit_list.get(5).get("信用卡名") + "\n" +
-                        "使用人數 " + credit_list.get(5).get("使用人數") + "\n");
+                        "使用人數 " + credit_list.get(5).get("使用人數"));
                 img6.setImageResource(Integer.parseInt(credit_list.get(5).get("星星")));
-                bundle1.putString("index", "5");
+                bundle3.putString("index", "5");
                 break;
             case 3:
                 img1.setImageResource(Integer.parseInt(credit_list.get(3).get("圖片")));
                 showNO1.setText("銀行 " + credit_list.get(3).get("銀行") + "\n" +
                         "信用卡名 " + credit_list.get(3).get("信用卡名") + "\n" +
-                        "使用人數 " + credit_list.get(3).get("使用人數") + "\n");
+                        "使用人數 " + credit_list.get(3).get("使用人數"));
                 img4.setImageResource(Integer.parseInt(credit_list.get(3).get("星星")));
                 bundle1.putString("index", "3");
 
                 img2.setImageResource(Integer.parseInt(credit_list.get(5).get("圖片")));
                 showNO2.setText("銀行 " + credit_list.get(5).get("銀行") + "\n" +
                         "信用卡名 " + credit_list.get(5).get("信用卡名") + "\n" +
-                        "使用人數 " + credit_list.get(5).get("使用人數") + "\n");
+                        "使用人數 " + credit_list.get(5).get("使用人數"));
                 img5.setImageResource(Integer.parseInt(credit_list.get(5).get("星星")));
-                bundle1.putString("index", "5");
+                bundle2.putString("index", "5");
 
                 img3.setImageResource(Integer.parseInt(credit_list.get(2).get("圖片")));
                 showNO3.setText("銀行 " + credit_list.get(2).get("銀行") + "\n" +
                         "信用卡名 " + credit_list.get(2).get("信用卡名") + "\n" +
-                        "使用人數 " + credit_list.get(2).get("使用人數") + "\n");
+                        "使用人數 " + credit_list.get(2).get("使用人數"));
                 img6.setImageResource(Integer.parseInt(credit_list.get(2).get("星星")));
-                bundle1.putString("index", "2");
+                bundle3.putString("index", "2");
                 break;
-                default:
-                    showNO1.setText("不再範圍值內");
+            default:
+                showNO1.setText("不再範圍值內");
         }
     }
 
     public void showInfo1(View view){
-        Intent intent = new Intent(fake_data.this, info.class);
-        intent.putExtras(bundle1);
-        startActivity(new Intent(intent));
+        Intent intent1 = new Intent(fake_data.this, info.class);
+        intent1.putExtras(bundle1);
+        startActivity(intent1);
 
     }
 
     public void showInfo2(View view){
-        Intent intent = new Intent(fake_data.this, info.class);
-        intent.putExtras(bundle2);
-        startActivity(new Intent(intent));
+        Intent intent2 = new Intent(fake_data.this, info.class);
+        intent2.putExtras(bundle2);
+        startActivity(intent2);
     }
 
     public void showInfo3(View view){
-        Intent intent = new Intent(fake_data.this, info.class);
-        intent.putExtras(bundle3);
-        startActivity(new Intent(intent));
+        Intent intent3 = new Intent(fake_data.this, info.class);
+        intent3.putExtras(bundle3);
+        startActivity(intent3);
     }
 
 }

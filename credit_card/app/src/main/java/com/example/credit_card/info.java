@@ -2,6 +2,8 @@ package com.example.credit_card;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,10 +16,13 @@ public class info extends AppCompatActivity {
     ArrayList<Map<String, String>> credit_list = new ArrayList<Map<String, String>>();
     Map<String, String> credit_card= new HashMap<>();
 
+    TextView show_info;
+    ImageView card_sample;
+
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent intent = getIntent();
-        Bundle bundle = intent.getExtras();
+        Bundle bundle = getIntent().getExtras();
+        String card_num = bundle.getString("index");
 
         credit_card.put("銀行", "花旗銀行");
         credit_card.put("信用卡名", "現金回饋PLUS卡");
@@ -74,111 +79,16 @@ public class info extends AppCompatActivity {
         credit_card.put("星星", String.valueOf(R.drawable.star1));
         credit_list.add(credit_card);
 
-        switch (spinner.getSelectedItemPosition())
-        {
-            case 0:
-                img1.setImageResource(R.drawable.card_04);
-                showNO1.setText("銀行 " + credit_list.get(3).get("銀行") + "\n" +
-                        "信用卡名 " + credit_list.get(3).get("信用卡名") + "\n" +
-                        "國內現金回饋 " + credit_list.get(3).get("回饋現金(國內)") + "\n" +
-                        "國外現金回饋 " + credit_list.get(3).get("回饋現金(國外)") + "\n" +
-                        "年費 " + credit_list.get(3).get("年費"));
-                img4.setImageResource(R.drawable.star4);
+        show_info = findViewById(R.id.showInfo);
+        card_sample = findViewById(R.id.card_sample);
 
-                img2.setImageResource(R.drawable.card_01);
-                showNO1.setText("銀行 " + credit_list.get(0).get("銀行") + "\n" +
-                        "信用卡名 " + credit_list.get(0).get("信用卡名") + "\n" +
-                        "國內現金回饋 " + credit_list.get(0).get("回饋現金(國內)") + "\n" +
-                        "國外現金回饋 " + credit_list.get(0).get("回饋現金(國外)") + "\n" +
-                        "年費 " + credit_list.get(0).get("年費"));
-                img5.setImageResource(R.drawable.star5);
 
-                img3.setImageResource(R.drawable.card_03);
-                showNO3.setText("銀行 " + credit_list.get(2).get("銀行") + "\n" +
-                        "信用卡名 " + credit_list.get(2).get("信用卡名") + "\n" +
-                        "國內現金回饋 " + credit_list.get(2).get("回饋現金(國內)") + "\n" +
-                        "國外現金回饋 " + credit_list.get(2).get("回饋現金(國外)") + "\n" +
-                        "年費 " + credit_list.get(2).get("年費"));
-                img6.setImageResource(R.drawable.star3);
-                break;
-            case 1:
-                img1.setImageResource(R.drawable.card_01);
-                showNO1.setText("銀行 " + credit_list.get(0).get("銀行") + "\n" +
-                        "信用卡名 " + credit_list.get(0).get("信用卡名") + "\n" +
-                        "國內現金回饋 " + credit_list.get(0).get("回饋現金(國內)") + "\n" +
-                        "國外現金回饋 " + credit_list.get(0).get("回饋現金(國外)") + "\n" +
-                        "年費 " + credit_list.get(0).get("年費"));
-                img4.setImageResource(R.drawable.star2);
+        card_sample.setImageResource(Integer.parseInt(credit_list.get(Integer.parseInt(card_num)).get("圖片")));
+        show_info.setText("銀行 " + credit_list.get(Integer.parseInt(card_num)).get("銀行") + "\n" +
+                          "信用卡名 " + credit_list.get(Integer.parseInt(card_num)).get("信用卡名") + "\n" +
+                          "國內現金回饋 " + credit_list.get(Integer.parseInt(card_num)).get("回饋現金(國內)") + "\n" +
+                          "國外現金回饋 " + credit_list.get(Integer.parseInt(card_num)).get("回饋現金(國外)") + "\n" +
+                          "年費 " + credit_list.get(Integer.parseInt(card_num)).get("年費"));
 
-                img2.setImageResource(R.drawable.card_02);
-                showNO2.setText("銀行 " + credit_list.get(1).get("銀行") + "\n" +
-                        "信用卡名 " + credit_list.get(1).get("信用卡名") + "\n" +
-                        "國內現金回饋 " + credit_list.get(1).get("回饋現金(國內)") + "\n" +
-                        "國外現金回饋 " + credit_list.get(1).get("回饋現金(國外)") + "\n" +
-                        "年費 " + credit_list.get(1).get("年費"));
-                img5.setImageResource(R.drawable.star1);
-
-                img3.setImageResource(R.drawable.card_03);
-                showNO3.setText("銀行 " + credit_list.get(2).get("銀行") + "\n" +
-                        "信用卡名 " + credit_list.get(2).get("信用卡名") + "\n" +
-                        "國內現金回饋 " + credit_list.get(2).get("回饋現金(國內)") + "\n" +
-                        "國外現金回饋 " + credit_list.get(2).get("回饋現金(國外)") + "\n" +
-                        "年費 " + credit_list.get(2).get("年費"));
-                img6.setImageResource(R.drawable.star5);
-
-                break;
-            case 2:
-                img1.setImageResource(R.drawable.card_05);
-                showNO1.setText("銀行 " + credit_list.get(4).get("銀行") + "\n" +
-                        "信用卡名 " + credit_list.get(4).get("信用卡名") + "\n" +
-                        "國內現金回饋 " + credit_list.get(4).get("回饋現金(國內)") + "\n" +
-                        "國外現金回饋 " + credit_list.get(4).get("回饋現金(國外)") + "\n" +
-                        "年費 " + credit_list.get(4).get("年費"));
-                img4.setImageResource(R.drawable.star5);
-
-                img2.setImageResource(R.drawable.card_04);
-                showNO2.setText("銀行 " + credit_list.get(3).get("銀行") + "\n" +
-                        "信用卡名 " + credit_list.get(3).get("信用卡名") + "\n" +
-                        "國內現金回饋 " + credit_list.get(3).get("回饋現金(國內)") + "\n" +
-                        "國外現金回饋 " + credit_list.get(3).get("回饋現金(國外)") + "\n" +
-                        "年費 " + credit_list.get(3).get("年費"));
-                img5.setImageResource(R.drawable.star2);
-
-                img3.setImageResource(R.drawable.card_03);
-                showNO3.setText("銀行 " + credit_list.get(2).get("銀行") + "\n" +
-                        "信用卡名 " + credit_list.get(2).get("信用卡名") + "\n" +
-                        "國內現金回饋 " + credit_list.get(2).get("回饋現金(國內)") + "\n" +
-                        "國外現金回饋 " + credit_list.get(2).get("回饋現金(國外)") + "\n" +
-                        "年費 " + credit_list.get(2).get("年費"));
-                img6.setImageResource(R.drawable.star3);
-                break;
-            case 3:
-                img1.setImageResource(R.drawable.card_04);
-                showNO1.setText("銀行 " + credit_list.get(3).get("銀行") + "\n" +
-                        "信用卡名 " + credit_list.get(3).get("信用卡名") + "\n" +
-                        "國內現金回饋 " + credit_list.get(3).get("回饋現金(國內)") + "\n" +
-                        "國外現金回饋 " + credit_list.get(3).get("回饋現金(國外)") + "\n" +
-                        "年費 " + credit_list.get(3).get("年費"));
-                img4.setImageResource(R.drawable.star3);
-
-                img2.setImageResource(R.drawable.card_01);
-                showNO2.setText("銀行 " + credit_list.get(0).get("銀行") + "\n" +
-                        "信用卡名 " + credit_list.get(0).get("信用卡名") + "\n" +
-                        "國內現金回饋 " + credit_list.get(0).get("回饋現金(國內)") + "\n" +
-                        "國外現金回饋 " + credit_list.get(0).get("回饋現金(國外)") + "\n" +
-                        "年費 " + credit_list.get(0).get("年費"));
-                img5.setImageResource(R.drawable.star5);
-
-                img3.setImageResource(R.drawable.card_03);
-                showNO3.setText("銀行 " + credit_list.get(2).get("銀行") + "\n" +
-                        "信用卡名 " + credit_list.get(2).get("信用卡名") + "\n" +
-                        "國內現金回饋 " + credit_list.get(2).get("回饋現金(國內)") + "\n" +
-                        "國外現金回饋 " + credit_list.get(2).get("回饋現金(國外)") + "\n" +
-                        "年費 " + credit_list.get(2).get("年費"));
-                img6.setImageResource(R.drawable.star2);
-                break;
-            default:
-                showNO1.setText("不再範圍值內");
-        }
     }
 }

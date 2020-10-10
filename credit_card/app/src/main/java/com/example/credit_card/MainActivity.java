@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity{
         @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         public void run() {
             try {
-                URL url = new URL("http://192.168.2.106/test/test.php");
+                URL url = new URL("http://192.168.2.106");
                 // 開始宣告 HTTP 連線需要的物件，這邊通常都是一綑的
                 HttpURLConnection connection = (HttpURLConnection) url.openConnection();
                 // 建立 Google 比較挺的 HttpURLConnection 物件

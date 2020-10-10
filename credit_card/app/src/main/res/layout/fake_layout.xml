@@ -30,21 +30,21 @@
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
+        android:gravity="center"
         android:text="點擊卡片圖示可獲得更多資訊"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <ScrollView
-        android:id="@+id/scrollView"
-        android:layout_width="411dp"
-        android:layout_height="643dp"
+        android:layout_width="408dp"
+        android:layout_height="581dp"
         android:layout_marginTop="32dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -52,7 +52,6 @@
         app:layout_constraintTop_toBottomOf="@+id/textView20">
 
         <LinearLayout
-            android:id="@+id/show_card"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
@@ -170,6 +169,12 @@
                     android:layout_height="match_parent" />
 
             </LinearLayout>
+
+            <TextView
+                android:id="@+id/block"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="20sp" />
 
         </LinearLayout>
     </ScrollView>
