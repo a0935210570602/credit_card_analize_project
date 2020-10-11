@@ -90,11 +90,14 @@ public class Info extends AppCompatActivity {
         card_sample = findViewById(R.id.card_sample);
 
         card_sample.setImageResource(Integer.parseInt(credit_list.get(Integer.parseInt(card_num)).get("圖片")));
-        show_info.setText("銀行 " + credit_list.get(Integer.parseInt(card_num)).get("銀行") + "\n" +
-                          "信用卡名 " + credit_list.get(Integer.parseInt(card_num)).get("信用卡名") + "\n" +
-                          "國內現金回饋 " + credit_list.get(Integer.parseInt(card_num)).get("回饋現金(國內)") + "\n" +
-                          "國外現金回饋 " + credit_list.get(Integer.parseInt(card_num)).get("回饋現金(國外)") + "\n" +
-                          "年費 " + credit_list.get(Integer.parseInt(card_num)).get("年費"));
+        card_sample.setAdjustViewBounds(true);
+        card_sample.setMaxHeight(600);
+        card_sample.setMaxWidth(800);
+        show_info.setText("銀行：" + credit_list.get(Integer.parseInt(card_num)).get("銀行") + "\n" +
+                          "信用卡名：" + credit_list.get(Integer.parseInt(card_num)).get("信用卡名") + "\n" +
+                          "國內現金回饋：" + credit_list.get(Integer.parseInt(card_num)).get("回饋現金(國內)") + "\n" +
+                          "國外現金回饋：" + credit_list.get(Integer.parseInt(card_num)).get("回饋現金(國外)") + "\n" +
+                          "年費：" + credit_list.get(Integer.parseInt(card_num)).get("年費"));
 
     }
 
