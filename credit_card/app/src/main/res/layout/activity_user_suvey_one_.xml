@@ -427,15 +427,30 @@
                 android:layout_height="wrap_content"
                 android:textSize="36sp" />
 
-            <Button
-                android:id="@+id/send_out"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/btn_all_shape"
-                android:text="資料送出"
-                android:textColor="#FFFFFF"
-                tools:layout_editor_absoluteY="1021dp" />
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/send_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_all_shape"
+                    android:text="資料送出"
+                    android:textColor="#FFFFFF"
+                    tools:layout_editor_absoluteY="1021dp" />
+
+                <Button
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/btn_all_shape"
+                    android:onClick="goback"
+                    android:text="返回主畫面" />
+            </LinearLayout>
 
             <TextView
                 android:id="@+id/show"

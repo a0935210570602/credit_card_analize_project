@@ -28,11 +28,38 @@
         app:layout_constraintStart_toEndOf="@+id/spinner"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/show_weight"
+        android:layout_width="145dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/btn_all_shape"
+        android:onClick="showChart1"
+        android:text="消費屬性分析(圓餅)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
+    <Button
+        android:id="@+id/show_weight2"
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="42dp"
+        android:background="@drawable/btn_all_shape"
+        android:onClick="showChart2"
+        android:text="消費屬性分析(直方)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/show_weight"
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+
     <TextView
         android:id="@+id/textView20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="點擊卡片圖示可獲得更多資訊"
         android:textColor="#FFFFFF"
@@ -40,13 +67,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/show_weight2" />
 
     <ScrollView
         android:id="@+id/sc"
-        android:layout_width="408dp"
-        android:layout_height="581dp"
-        android:layout_marginTop="32dp"
+        android:layout_width="wrap_content"
+        android:layout_height="467dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginBottom="128dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -61,7 +89,7 @@
                 android:id="@+id/img1"
                 android:layout_width="match_parent"
                 android:layout_height="226dp"
-                android:onClick="onClick"
+                android:onClick="onClick1"
                 app:srcCompat="@drawable/whiteboard" />
 
             <TextView
@@ -97,7 +125,7 @@
                 android:id="@+id/img2"
                 android:layout_width="match_parent"
                 android:layout_height="226dp"
-                android:onClick="onClick"
+                android:onClick="onClick2"
                 app:srcCompat="@drawable/whiteboard" />
 
             <TextView
@@ -136,7 +164,7 @@
                 android:id="@+id/img3"
                 android:layout_width="match_parent"
                 android:layout_height="226dp"
-                android:onClick="onClick"
+                android:onClick="onClick3"
                 app:srcCompat="@drawable/whiteboard" />
 
             <TextView

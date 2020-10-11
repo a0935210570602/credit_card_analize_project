@@ -3,6 +3,8 @@ package com.example.credit_card;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -18,13 +20,16 @@ public class Info extends AppCompatActivity {
     Map<String, String> credit_card= new HashMap<>();
     TextView show_info;
     ImageView card_sample;
+    Button back;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.info);
 
-        Bundle bundle = getIntent().getExtras();
-        String card_num = bundle.getString("index");
+        back = findViewById(R.id.back);
+
+        Intent intent = getIntent();
+        String card_num = intent.getStringExtra("index");
 
         credit_card.put("銀行", "花旗銀行");
         credit_card.put("信用卡名", "現金回饋PLUS卡");
@@ -91,5 +96,9 @@ public class Info extends AppCompatActivity {
                           "國外現金回饋 " + credit_list.get(Integer.parseInt(card_num)).get("回饋現金(國外)") + "\n" +
                           "年費 " + credit_list.get(Integer.parseInt(card_num)).get("年費"));
 
+    }
+
+    public void goback(View view){
+        finish();
     }
 }

@@ -32,7 +32,7 @@ public class UserSuveyOne extends AppCompatActivity{
             , R.id.checkBox13, R.id.checkBox14, R.id.checkBox15, R.id.checkBox16};
 //    TextInputEditText input_salary, year_fee;
     String income;
-    Button send_out;
+    Button send_out, back;
     TextView show, show1;
     String result = "";
 
@@ -45,6 +45,9 @@ public class UserSuveyOne extends AppCompatActivity{
         location_foreign = findViewById(R.id.loc_for);
         show = findViewById(R.id.show);
         show1 = findViewById(R.id.show1);
+
+        back = findViewById(R.id.back);
+
 
         send_out = findViewById(R.id.send_out);
         send_out.setOnClickListener(new View.OnClickListener() {
@@ -59,6 +62,10 @@ public class UserSuveyOne extends AppCompatActivity{
         });
     }
 
+    public void goback(View view){
+        finish();
+    }
+
     int base_point = 10;
     int redpoint_money, redpoint_mile, point_mutiple, first_mile_back, forign_cost_mile, domestic_cost_mile, digital_cost_mile, digital_bak_max,
         internet_cost, year_cost, week_movie, workday_movie, gas_money, gas_discount, forign_money_back, domestic_money_back = 1;
@@ -69,60 +76,60 @@ public class UserSuveyOne extends AppCompatActivity{
     private Runnable mutiThread = new Runnable(){
         @RequiresApi(api = Build.VERSION_CODES.KITKAT)
         public void run() {
-            try {
-                URL url = new URL("http://192.168.0.101/test/make_database_update.php");
-                // 開始宣告 HTTP 連線需要的物件，這邊通常都是一綑的
-                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
-                // 建立 Google 比較挺的 HttpURLConnection 物件
-                connection.setRequestMethod("POST");
-                // 設定連線方式為 POST
-                connection.setDoOutput(true); // 允許輸出
-                connection.setDoInput(true);  // 允許讀入
-                connection.setUseCaches(false); // 不使用快取
-                connection.setReadTimeout(10000);
-                connection.setConnectTimeout(15000);
-             /////////////////////////////////////////////////////////////////////////////////////////
-                connection.setRequestProperty("Content-Type", "application/json; utf-8");          ///
-                connection.setRequestProperty("Accept", "application/json");                       ///https://www.baeldung.com/httpurlconnection-post
-//                String jsonInputString = "{\"name\": \"Upendra\", \"job\": \"Programmer\"}";     ///
-                String jsonInputString = "8888888888";                                             ///
-//                try(OutputStream os = connection.getOutputStream()) {                              ///
-//                    byte[] input = jsonInputString.getBytes("utf-8");                 ///
-//                    os.write(input, 0, input.length);                                         ///
-//                }                                                                                 ///
-            /////////////////////////////////////////////////////////////////////////////////////////
-                connection.connect(); // 開始連線
-
-                int responseCode =
-                        connection.getResponseCode();
-                // 建立取得回應的物件
-                if (responseCode ==
-                        HttpURLConnection.HTTP_OK) {
-                    // 如果 HTTP 回傳狀態是 OK ，而不是 Error
-                    InputStream inputStream =
-                            connection.getInputStream();
-                    // 取得輸入串流
-                    BufferedReader bufReader = new BufferedReader(new InputStreamReader(inputStream, "utf-8"), 8);
-                    // 讀取輸入串流的資料
-                    String box = ""; // 宣告存放用字串
-                    String line = null; // 宣告讀取用的字串
-                    while ((line = bufReader.readLine()) != null) {
-                        box += line + "\n";
-                        // 每當讀取出一列，就加到存放字串後面
-                    }
-                    inputStream.close(); // 關閉輸入串流
-                    Log.e("box", box);
-
-                    result = box; // 把存放用字串放到全域變數
-                    Log.e("result", result);
-                }
-                // 讀取輸入串流並存到字串的部分
-                // 取得資料後想用不同的格式
-                // 例如 Json 等等，都是在這一段做處理
-
-            } catch (Exception e) {
-                result = e.toString(); // 如果出事，回傳錯誤訊息
-            }
+//            try {
+//                URL url = new URL("http://192.168.0.101/test/make_database_update.php");
+//                // 開始宣告 HTTP 連線需要的物件，這邊通常都是一綑的
+//                HttpURLConnection connection = (HttpURLConnection) url.openConnection();
+//                // 建立 Google 比較挺的 HttpURLConnection 物件
+//                connection.setRequestMethod("POST");
+//                // 設定連線方式為 POST
+//                connection.setDoOutput(true); // 允許輸出
+//                connection.setDoInput(true);  // 允許讀入
+//                connection.setUseCaches(false); // 不使用快取
+//                connection.setReadTimeout(10000);
+//                connection.setConnectTimeout(15000);
+//             /////////////////////////////////////////////////////////////////////////////////////////
+//                connection.setRequestProperty("Content-Type", "application/json; utf-8");          ///
+//                connection.setRequestProperty("Accept", "application/json");                       ///https://www.baeldung.com/httpurlconnection-post
+////                String jsonInputString = "{\"name\": \"Upendra\", \"job\": \"Programmer\"}";     ///
+//                String jsonInputString = "8888888888";                                             ///
+////                try(OutputStream os = connection.getOutputStream()) {                              ///
+////                    byte[] input = jsonInputString.getBytes("utf-8");                 ///
+////                    os.write(input, 0, input.length);                                         ///
+////                }                                                                                 ///
+//            /////////////////////////////////////////////////////////////////////////////////////////
+//                connection.connect(); // 開始連線
+//
+//                int responseCode =
+//                        connection.getResponseCode();
+//                // 建立取得回應的物件
+//                if (responseCode ==
+//                        HttpURLConnection.HTTP_OK) {
+//                    // 如果 HTTP 回傳狀態是 OK ，而不是 Error
+//                    InputStream inputStream =
+//                            connection.getInputStream();
+//                    // 取得輸入串流
+//                    BufferedReader bufReader = new BufferedReader(new InputStreamReader(inputStream, "utf-8"), 8);
+//                    // 讀取輸入串流的資料
+//                    String box = ""; // 宣告存放用字串
+//                    String line = null; // 宣告讀取用的字串
+//                    while ((line = bufReader.readLine()) != null) {
+//                        box += line + "\n";
+//                        // 每當讀取出一列，就加到存放字串後面
+//                    }
+//                    inputStream.close(); // 關閉輸入串流
+//                    Log.e("box", box);
+//
+//                    result = box; // 把存放用字串放到全域變數
+//                    Log.e("result", result);
+//                }
+//                // 讀取輸入串流並存到字串的部分
+//                // 取得資料後想用不同的格式
+//                // 例如 Json 等等，都是在這一段做處理
+//
+//            } catch (Exception e) {
+//                result = e.toString(); // 如果出事，回傳錯誤訊息
+//            }
 
 
             // 當這個執行緒完全跑完後執行

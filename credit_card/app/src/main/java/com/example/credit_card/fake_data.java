@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
@@ -29,6 +30,7 @@ public class fake_data extends AppCompatActivity {
     TextView showNO1, showNO2 ,showNO3;
     ImageView img1, img2, img3, img4, img5, img6;
     ScrollView scrollView;
+    Button show_weight;
 
     @SuppressLint("ResourceAsColor")
     @Override
@@ -105,6 +107,8 @@ public class fake_data extends AppCompatActivity {
         showNO1 = findViewById(R.id.showNO1);
         showNO2 = findViewById(R.id.showNO2);
         showNO3 = findViewById(R.id.showNO3);
+
+        show_weight = findViewById(R.id.show_weight);
 
         img1 = findViewById(R.id.img1);
         img2 = findViewById(R.id.img2);
@@ -204,12 +208,12 @@ public class fake_data extends AppCompatActivity {
                 img4.setImageResource(Integer.parseInt(credit_list.get(0).get("星星")));
                 bundle1.putString("index", "0");
 
-                img2.setImageResource(Integer.parseInt(credit_list.get(5).get("圖片")));
+                img2.setImageResource(Integer.parseInt(credit_list.get(4).get("圖片")));
                 showNO2.setText(
-                    "信用卡名：" + credit_list.get(5).get("信用卡名") + "\n" +
-                    "使用人數：" + credit_list.get(5).get("使用人數"));
-                img5.setImageResource(Integer.parseInt(credit_list.get(5).get("星星")));
-                bundle2.putString("index", "5");
+                    "信用卡名：" + credit_list.get(4).get("信用卡名") + "\n" +
+                    "使用人數：" + credit_list.get(4).get("使用人數"));
+                img5.setImageResource(Integer.parseInt(credit_list.get(4).get("星星")));
+                bundle2.putString("index", "4");
 
                 img3.setImageResource(Integer.parseInt(credit_list.get(2).get("圖片")));
                 showNO3.setText(
@@ -234,12 +238,12 @@ public class fake_data extends AppCompatActivity {
                 img5.setImageResource(Integer.parseInt(credit_list.get(3).get("星星")));
                 bundle2.putString("index", "3");
 
-                img3.setImageResource(Integer.parseInt(credit_list.get(5).get("圖片")));
+                img3.setImageResource(Integer.parseInt(credit_list.get(2).get("圖片")));
                 showNO3.setText(
-                        "信用卡名：" + credit_list.get(5).get("信用卡名") + "\n" +
-                        "使用人數：" + credit_list.get(5).get("使用人數"));
-                img6.setImageResource(Integer.parseInt(credit_list.get(5).get("星星")));
-                bundle3.putString("index", "5");
+                        "信用卡名：" + credit_list.get(2).get("信用卡名") + "\n" +
+                        "使用人數：" + credit_list.get(2).get("使用人數"));
+                img6.setImageResource(Integer.parseInt(credit_list.get(2).get("星星")));
+                bundle3.putString("index", "2");
                 break;
             case 3:
                 img1.setImageResource(Integer.parseInt(credit_list.get(3).get("圖片")));
@@ -249,12 +253,12 @@ public class fake_data extends AppCompatActivity {
                 img4.setImageResource(Integer.parseInt(credit_list.get(3).get("星星")));
                 bundle1.putString("index", "3");
 
-                img2.setImageResource(Integer.parseInt(credit_list.get(5).get("圖片")));
+                img2.setImageResource(Integer.parseInt(credit_list.get(1).get("圖片")));
                 showNO2.setText(
-                        "信用卡名：" + credit_list.get(5).get("信用卡名") + "\n" +
-                        "使用人數：" + credit_list.get(5).get("使用人數"));
-                img5.setImageResource(Integer.parseInt(credit_list.get(5).get("星星")));
-                bundle2.putString("index", "5");
+                        "信用卡名：" + credit_list.get(1).get("信用卡名") + "\n" +
+                        "使用人數：" + credit_list.get(1).get("使用人數"));
+                img5.setImageResource(Integer.parseInt(credit_list.get(1).get("星星")));
+                bundle2.putString("index", "1");
 
                 img3.setImageResource(Integer.parseInt(credit_list.get(2).get("圖片")));
                 showNO3.setText(
@@ -267,22 +271,33 @@ public class fake_data extends AppCompatActivity {
                 showNO1.setText("不再範圍值內");
         }
     }
-
-    public void onClick(View v) {
-        Intent intent = new Intent();
-        switch(v.getId()){
-            case R.id.img1:
-                intent.putExtras(bundle1);
-                break;
-            case R.id.img2:
-                intent.putExtras(bundle2);
-                break;
-            case R.id.img3:
-                intent.putExtras(bundle3);
-                break;
-        }
+    Intent intent = new Intent();
+    public void onClick1(View v) {
+        intent.putExtras(bundle1);
         intent.setClass(this , Info.class);
         startActivity(intent);
+    }
+
+    public void onClick2(View v) {
+        intent.putExtras(bundle2);
+        intent.setClass(this , Info.class);
+        startActivity(intent);
+    }
+
+    public void onClick3(View v) {
+        intent.putExtras(bundle3);
+        intent.setClass(this , Info.class);
+        startActivity(intent);
+    }
+
+    public void showChart1(View v) {
+//        intent.putExtras();
+        startActivity(new Intent(this, chart.class));
+    }
+
+    public void showChart2(View v) {
+//        intent.putExtras();
+        startActivity(new Intent(this, chart2.class));
     }
 
 }
