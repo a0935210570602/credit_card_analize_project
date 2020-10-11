@@ -2,6 +2,7 @@ package com.example.credit_card;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -11,16 +12,17 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-public class info extends AppCompatActivity {
+public class Info extends AppCompatActivity {
 
     ArrayList<Map<String, String>> credit_list = new ArrayList<Map<String, String>>();
     Map<String, String> credit_card= new HashMap<>();
-
     TextView show_info;
     ImageView card_sample;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.info);
+
         Bundle bundle = getIntent().getExtras();
         String card_num = bundle.getString("index");
 
@@ -81,7 +83,6 @@ public class info extends AppCompatActivity {
 
         show_info = findViewById(R.id.showInfo);
         card_sample = findViewById(R.id.card_sample);
-
 
         card_sample.setImageResource(Integer.parseInt(credit_list.get(Integer.parseInt(card_num)).get("圖片")));
         show_info.setText("銀行 " + credit_list.get(Integer.parseInt(card_num)).get("銀行") + "\n" +

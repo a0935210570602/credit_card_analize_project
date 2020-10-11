@@ -43,6 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <ScrollView
+        android:id="@+id/sc"
         android:layout_width="408dp"
         android:layout_height="581dp"
         android:layout_marginTop="32dp"
@@ -60,7 +61,7 @@
                 android:id="@+id/img1"
                 android:layout_width="match_parent"
                 android:layout_height="226dp"
-                android:onClick="showInfo1"
+                android:onClick="onClick"
                 app:srcCompat="@drawable/whiteboard" />
 
             <TextView
@@ -82,7 +83,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="人氣度 : "
+                    android:text="系統評價 : "
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
 
@@ -96,7 +97,7 @@
                 android:id="@+id/img2"
                 android:layout_width="match_parent"
                 android:layout_height="226dp"
-                android:onClick="showInfo2"
+                android:onClick="onClick"
                 app:srcCompat="@drawable/whiteboard" />
 
             <TextView
@@ -120,7 +121,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="人氣度 : "
+                    android:text="系統評價 : "
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
 
@@ -135,7 +136,7 @@
                 android:id="@+id/img3"
                 android:layout_width="match_parent"
                 android:layout_height="226dp"
-                android:onClick="showInfo3"
+                android:onClick="onClick"
                 app:srcCompat="@drawable/whiteboard" />
 
             <TextView
@@ -159,7 +160,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="人氣度 : "
+                    android:text="系統評價 : "
                     android:textColor="#FFFFFF"
                     android:textSize="20sp" />
 
