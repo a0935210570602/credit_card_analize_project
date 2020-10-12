@@ -67,7 +67,7 @@ responses = {
     505: ('HTTP Version Not Supported', 'Cannot fulfill request.'),
     }
 url = "https://www.money101.com.tw/%E4%BF%A1%E7%94%A8%E5%8D%A1/%E7%B2%BE%E9%81%B8%E6%8E%A8%E8%96%A6?gclid=Cj0KCQjw7sz6BRDYARIsAPHzrNIsyVl9pIe0Q161BrPBO-fYKO2i1kviKYKcWnKZ2QT0xt25dsDH7IAaAj3REALw_wcB"
-status_code = urllib.request.urlopen(url).getcode()
+status_code = urlopen(url).getcode()
 website_is_up = status_code == 200
 print(website_is_up)
 #use show the details of status
