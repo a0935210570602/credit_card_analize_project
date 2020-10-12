@@ -326,10 +326,10 @@ public class UserSuveyOne extends AppCompatActivity{
 
             show1.setText(income + " " + card_price);
 
-            startActivity(new Intent(UserSuveyOne.this, fake_data.class));
+            startActivity(new Intent(UserSuveyOne.this, WhichToSee.class));
 
             if(result.equalsIgnoreCase("success\n") ){
-                startActivity(new Intent(UserSuveyOne.this, fake_data.class));
+                startActivity(new Intent(UserSuveyOne.this, WhichToSee.class));
             }
             else{
                 Log.d("TAG", "update fall ");

@@ -32,7 +32,7 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test.ext:junit:1.1.1'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
-
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
     implementation 'com.github.AnyChart:AnyChart-Android:1.1.2'
     implementation 'com.android.support:multidex:1.0.3'
 

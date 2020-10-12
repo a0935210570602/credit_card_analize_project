@@ -28,38 +28,10 @@
         app:layout_constraintStart_toEndOf="@+id/spinner"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/show_weight"
-        android:layout_width="145dp"
-        android:layout_height="57dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:background="@drawable/btn_all_shape"
-        android:onClick="showChart1"
-        android:text="消費屬性分析(圓餅)"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
-
-    <Button
-        android:id="@+id/show_weight2"
-        android:layout_width="150dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="42dp"
-        android:background="@drawable/btn_all_shape"
-        android:onClick="showChart2"
-        android:text="消費屬性分析(直方)"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toEndOf="@+id/show_weight"
-        app:layout_constraintTop_toBottomOf="@+id/spinner" />
-
     <TextView
         android:id="@+id/textView20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:gravity="center"
         android:text="點擊卡片圖示可獲得更多資訊"
         android:textColor="#FFFFFF"
@@ -67,7 +39,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/show_weight2" />
+        tools:layout_editor_absoluteY="173dp" />
 
     <ScrollView
         android:id="@+id/sc"

@@ -108,8 +108,6 @@ public class fake_data extends AppCompatActivity {
         showNO2 = findViewById(R.id.showNO2);
         showNO3 = findViewById(R.id.showNO3);
 
-        show_weight = findViewById(R.id.show_weight);
-
         img1 = findViewById(R.id.img1);
         img2 = findViewById(R.id.img2);
         img3 = findViewById(R.id.img3);

@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity {
             case R.id.f_btu:
                 intent.setClass(this , UserSuveyOne.class);
                 break;
-            case R.id.s_btu:
-                intent.setClass(this, UserSuveyOne.class);
-                break;
+//            case R.id.s_btu:
+//                intent.setClass(this, UserSuveyOne.class);
+//                break;
             case R.id.detail_btu:
                 intent.setClass(this , UserSuveyOne.class);
                 break;
