@@ -17,23 +17,23 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void onClick(View v) {
-        Intent intent = new Intent();
-        switch(v.getId()){
-            case R.id.f_btu:
-                intent.setClass(this , UserSuveyOne.class);
-                break;
-//            case R.id.s_btu:
-//                intent.setClass(this, UserSuveyOne.class);
+        Intent intent = new Intent(this, section1.class);
+//        switch(v.getId()){
+//            case R.id.f_btu:
+//                intent.setClass(this , UserSuveyOne.class);
 //                break;
-            case R.id.detail_btu:
-                intent.setClass(this , UserSuveyOne.class);
-                break;
-            case R.id.group_btu:
-                intent.setClass(this , UserSuveyOne.class);
-                break;
-        }
+////            case R.id.s_btu:
+////                intent.setClass(this, UserSuveyOne.class);
+////                break;
+//            case R.id.detail_btu:
+//                intent.setClass(this , UserSuveyOne.class);
+//                break;
+//            case R.id.group_btu:
+//                intent.setClass(this , UserSuveyOne.class);
+//                break;
+//        }
+//        startActivity(intent);
         startActivity(intent);
-
         
     }
 }

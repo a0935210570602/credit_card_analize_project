@@ -4,75 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#98551A"
+    android:background="#4F4F4F"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="203dp"
-        android:layout_height="209dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="338dp"
+        android:layout_height="435dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/frame_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="280dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="29dp"
+            android:text="你好:D                                   歡迎使用卡卡神探~~   "
+            android:textColor="#7C6E6E"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="281dp"
+            android:layout_height="141dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="29dp"
+            android:text="卡卡神探是個可以從你留下的線索中來為你量身評估篩選出最適合你的信用卡的小幫手唷!"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="281dp"
+            android:layout_height="147dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="21dp"
+            android:text="現在就動動你的手指把你中意的資訊留給我們吧!"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="136dp"
+        android:background="@drawable/btn_all_shape"
+        android:onClick="onClick"
+        android:text="Start"
+        android:textColor="#7C6E6E"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView24"
-        app:layout_constraintVertical_bias="0.097"
-        app:srcCompat="@drawable/craditcard_icon" />
-
-    <TextView
-        android:id="@+id/f_btu"
-        android:layout_width="229dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="36dp"
-        android:background="@color/design_default_color_primary_dark"
-        android:gravity="center"
-        android:onClick="onClick"
-        android:text="快速調查模式"
-        android:textColor="@color/colorAccent"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
-
-    <TextView
-        android:id="@+id/detail_btu"
-        android:layout_width="229dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/design_default_color_primary_dark"
-        android:gravity="center"
-        android:text="使用說明"
-        android:textColor="@color/colorAccent"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/f_btu" />
-
-    <TextView
-        android:id="@+id/group_btu"
-        android:layout_width="229dp"
-        android:layout_height="56dp"
-        android:layout_marginTop="20dp"
-        android:background="@color/design_default_color_primary_dark"
-        android:gravity="center"
-        android:text="開發團隊"
-        android:textColor="@color/colorAccent"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detail_btu" />
-
-    <TextView
-        android:id="@+id/textView24"
-        android:layout_width="302dp"
-        android:layout_height="87dp"
-        android:layout_marginTop="44dp"
-        android:gravity="center"
-        android:text="卡卡神探"
-        android:textColor="@color/design_default_color_secondary"
-        android:textSize="60sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.495"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -3,8 +3,9 @@
 
 <selector
     xmlns:android="http://schemas.android.com/apk/res/android">
+
     <!-- 按壓時 -->
-    <item android:state_pressed="true">
+    <item android:state_checked="true">
         <!--rectangle 長方形 可以畫出直角形，圓角形，弧形等-->
         <shape android:shape="rectangle">
             <!--設定圓角，當設置的圓角半徑很大，就可變成弧形邊了-->
@@ -24,4 +25,6 @@
             <gradient android:angle="-90" android:startColor="#D3D3D3" android:endColor="#D3D3D3"  />
         </shape>
     </item>
+
+
 </selector>

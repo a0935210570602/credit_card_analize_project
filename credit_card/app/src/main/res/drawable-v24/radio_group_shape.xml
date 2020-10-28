@@ -3,16 +3,17 @@
 
 <selector
     xmlns:android="http://schemas.android.com/apk/res/android">
+
     <!-- 按壓時 -->
-    <item android:state_pressed="true">
+    <item android:state_checked="true">
         <!--rectangle 長方形 可以畫出直角形，圓角形，弧形等-->
         <shape android:shape="rectangle">
             <!--設定圓角，當設置的圓角半徑很大，就可變成弧形邊了-->
             <corners android:radius="15dip" />
             <!--邊框-->
-            <stroke android:width="1dip" android:color="#BEBEBE" />
+            <stroke android:width="1dip" android:color="#FFA500" />
             <!--漸層顏色-->
-            <gradient android:angle="-90" android:startColor="#BEBEBE" android:endColor="#BEBEBE"  />
+            <gradient android:angle="-90" android:startColor="#FFA500" android:endColor="#FFA500"  />
         </shape>
     </item>
 
@@ -20,8 +21,10 @@
     <item android:color="@android:color/black">
         <shape android:shape="rectangle"  >
             <corners android:radius="15dip" />
-            <stroke android:width="1dip" android:color="#D3D3D3" />
-            <gradient android:angle="-90" android:startColor="#D3D3D3" android:endColor="#D3D3D3"  />
+            <stroke android:width="1dip" android:color="#F0D468" />
+            <gradient android:angle="-90" android:startColor="#F0D468" android:endColor="#F0D468"  />
         </shape>
     </item>
+
+
 </selector>

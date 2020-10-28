@@ -5,7 +5,6 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:usesCleartextTraffic="true"
         android:name=".GlobalVariable"
         android:allowBackup="true"
         android:icon="@drawable/craditcard_icon"
@@ -13,8 +12,12 @@
         android:networkSecurityConfig="@xml/network_security_config"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".UserSuveyOne"/>
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".section3"></activity>
+        <activity android:name=".section2" />
+        <activity android:name=".section1" />
+        <activity android:name=".UserSuveyOne" />
         <activity android:name=".fake_data" />
         <activity android:name=".Info" />
         <activity android:name=".chart" />

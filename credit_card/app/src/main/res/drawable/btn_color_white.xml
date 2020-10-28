@@ -12,7 +12,7 @@
                 android:width="3dp"
                 android:color="@color/textColorPrimary" />
             <corners
-                android:radius="3dp" />
+                android:radius="20dp" />
             <padding
                 android:left="10dp"
                 android:top="10dp"
@@ -50,7 +50,7 @@
                 android:width="3dp"
                 android:color="@color/textColorPrimary" />
             <corners
-                android:radius="3dp" />
+                android:radius="20dp" />
             <padding
                 android:left="10dp"
                 android:top="10dp"

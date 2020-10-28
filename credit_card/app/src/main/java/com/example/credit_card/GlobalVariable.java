@@ -1,17 +1,14 @@
 package com.example.credit_card;
 
 import android.app.Application;
-import android.util.Log;
 
 import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 public class GlobalVariable extends Application {
     private ArrayList<Integer> user_statistics;
 
     public void initializationProperties() {
-        user_statistics = new ArrayList<Integer>();                                            // 1  redpoint_money
+        user_statistics = new ArrayList<>();                                            // 1  redpoint_money
         for (Integer i = 0; i < 17; i++)                           // 2  redpoint_mile         // 3  point_mutiple
             user_statistics.add(0);                                // 4  first_mile_back       // 5  forign_cost_mile
     }                                                              // 6  domestic_cost_mile    // 7  digital_bak_max
