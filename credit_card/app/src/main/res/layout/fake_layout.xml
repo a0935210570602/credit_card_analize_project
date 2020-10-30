@@ -3,12 +3,14 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:background="#4F4F4F">
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="205dp"
         android:layout_height="50dp"
+        android:layout_marginStart="8dp"
         android:layout_marginTop="20dp"
         android:backgroundTint="@color/red"
         app:layout_constraintStart_toStartOf="parent"
@@ -19,6 +21,7 @@
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
         android:background="@drawable/btn_all_shape"
         android:onClick="verify"
         android:text="確認結果"
@@ -30,24 +33,23 @@
 
     <TextView
         android:id="@+id/textView20"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="296dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
         android:gravity="center"
-        android:text="點擊卡片圖示可獲得更多資訊"
+        android:text="點擊卡片圖示可獲得更多資訊    左右滑動可察看分析統計圖表"
         android:textColor="#FFFFFF"
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="173dp" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <ScrollView
         android:id="@+id/sc"
-        android:layout_width="wrap_content"
-        android:layout_height="467dp"
-        android:layout_marginTop="92dp"
-        android:layout_marginBottom="128dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="0dp"
+        android:layout_height="517dp"
+        android:layout_marginTop="24dp"
+        android:background="#FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView20">
