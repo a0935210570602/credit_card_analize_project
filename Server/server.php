@@ -6,12 +6,13 @@
     header('Access-Control-Allow-Origin: http://localhost:8080');
     header('Access-Control-Allow-Credentials: true');
 
-    // $json = file_get_contents('php://input');
-    // $data = json_decode($json);
-    // $request_code = $data->request_code;
-    $request_code = 202;
-    // $json_encode = json_encode($data);
-    $json_encode = "{creditcard_name:001,comment:yourmother,request_code:202}";
+    $json = file_get_contents('php://input');
+    //raw data {"creditcard_name":"002","comment":"yourmothesssr","request_code":202}
+    $data = json_decode($json);
+    $request_code = $data->request_code;
+    // $request_code = 202;
+    $json_encode = json_encode($data);
+    // $json_encode = "{creditcard_name:001,comment:yourmother,request_code:202}";
     // 200 資料庫更新請求
     // 201 分析權重，信用卡推薦
     // 202 評論database update
