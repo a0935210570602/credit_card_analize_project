@@ -14,7 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".section3"></activity>
+        <activity android:name=".MainActivity_Show_Result"></activity>
+        <activity android:name=".section3" />
         <activity android:name=".section2" />
         <activity android:name=".section1" />
         <activity android:name=".UserSuveyOne" />
