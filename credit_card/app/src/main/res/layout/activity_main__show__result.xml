@@ -25,23 +25,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#5D5A52"
-                app:tabSelectedTextColor="#000"
+                app:tabSelectedTextColor="#FF0000"
                 app:tabTextColor="#fff">
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Red" />
+                    android:text="Top1" />
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Green" />
+                    android:text="Top2" />
 
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Blue" />
+                    android:text="Top3" />
 
             </com.google.android.material.tabs.TabLayout>
 
@@ -50,6 +50,7 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout4"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -71,7 +72,6 @@
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             </androidx.viewpager.widget.ViewPager>
-
         </LinearLayout>
 
         <LinearLayout
@@ -84,55 +84,73 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent">
 
-            <Button
-                android:id="@+id/button4"
+            <TextView
+                android:id="@+id/textView42"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/btn_color_gray"
-                android:text="Button" />
+                android:text="                            " />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/target"
+                android:clickable="false"
+                android:onClick="btn1" />
 
             <TextView
                 android:id="@+id/textView38"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.2" />
+                android:layout_weight="1"
+                android:text="                            " />
 
             <Button
-                android:id="@+id/button5"
+                android:id="@+id/button2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/btn_color_gray"
-                android:text="Button" />
+                android:background="@drawable/research"
+                android:onClick="btn2" />
 
             <TextView
                 android:id="@+id/textView40"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.2" />
+                android:layout_weight="1"
+                android:text="                            " />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/button3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/btn_color_gray"
-                android:text="開發人員" />
+                android:background="@drawable/system"
+                android:onClick="btn3" />
 
             <TextView
                 android:id="@+id/textView41"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.2" />
+                android:layout_weight="1"
+                android:text="                            " />
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/button4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="@drawable/btn_color_gray"
-                android:text="重新調查" />
+                android:background="@drawable/show"
+                android:onClick="btn4" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="                            " />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
