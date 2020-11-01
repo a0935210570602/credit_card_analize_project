@@ -58,19 +58,19 @@
 
                 <TextView
                     android:id="@+id/showContent"
-                    android:layout_width="382dp"
-                    android:layout_height="201dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
                     android:layout_marginStart="16dp"
                     android:layout_marginTop="32dp"
                     android:layout_marginEnd="16dp"
                     android:layout_marginBottom="16dp"
                     android:gravity="center"
-                    android:textSize="24sp"
+                    android:textSize="18sp"
                     tools:text="123" />
 
                 <LinearLayout
-                    android:layout_width="156dp"
-                    android:layout_height="wrap_content"
+                    android:layout_width="187dp"
+                    android:layout_height="25dp"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:orientation="horizontal">
@@ -80,7 +80,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:text="推薦程度:" />
+                        android:text="推薦程度:"
+                        android:textSize="18sp" />
 
                     <ImageView
                         android:id="@+id/reference"

@@ -131,10 +131,8 @@ public class MainActivity_Show_Result extends AppCompatActivity {
                 pageAdapter = new PageAdapter(getSupportFragmentManager());
 
                 pageAdapter.addFragment(new Top1Fragment(), "No1");
-
-//                pageAdapter.addFragment(new Top2Fragment(), "No2");
-//
-//                pageAdapter.addFragment(new Top3Fragment(), "No3");
+                pageAdapter.addFragment(new Top2Fragment(), "No2");
+                pageAdapter.addFragment(new Top3Fragment(), "No3");
 
                 viewPager.setPageTransformer(true, new ZoomOutPageTransformer());
 

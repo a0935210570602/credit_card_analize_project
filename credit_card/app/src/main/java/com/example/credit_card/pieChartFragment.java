@@ -8,12 +8,34 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.anychart.AnyChart;
+import com.anychart.AnyChartView;
+import com.anychart.chart.common.dataentry.DataEntry;
+import com.anychart.chart.common.dataentry.ValueDataEntry;
+import com.anychart.charts.Cartesian;
+import com.anychart.charts.Pie;
+
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link pieChartFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
 public class pieChartFragment extends Fragment {
+
+    AnyChartView anyChartView;
+    String[] mon = {"紅利折抵金", "紅利換里程", "最高基點倍數",
+            "首刷里程回饋", "國外消費累積哩程", "國內消費累積哩程",
+            "周末電影折扣", "平日電影折扣", "加油現金回饋",
+            "加油優惠", "國外消費線回饋", "國內消費現金回饋",
+            "數位通路回饋上限", "網購回饋"};
+    int[] wei = {30,40,80,
+            70,55,44,
+            90,30,10,
+            50,88,47,
+            10,58};
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +81,22 @@ public class pieChartFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_pie_chart, container, false);
+        View view = inflater.inflate(R.layout.fragment_pie_chart, container, false);
+        anyChartView = view.findViewById(R.id.any_chart_view);
+        setupPieChart();
+
+        return view;
+    }
+
+    public void setupPieChart() {
+        Pie pie = AnyChart.pie();
+        List<DataEntry> dataEntries = new ArrayList<>();
+
+        for (int i = 0; i < mon.length; i++) {
+            dataEntries.add(new ValueDataEntry(mon[i], wei[i]));
+        }
+
+        pie.data(dataEntries);
+        anyChartView.setChart(pie);
     }
 }

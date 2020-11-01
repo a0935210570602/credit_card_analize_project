@@ -72,11 +72,9 @@ public class Top3Fragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_top3,container,false);
 
-        img = getView().findViewById(R.id.img);
-        reference = getView().findViewById(R.id.reference);
-        showContent = getView().findViewById(R.id.showContent);
-
+        credit_card = new HashMap<>();
         credit_card.put("銀行", "中國信託");
         credit_card.put("信用卡名", "TAIPEI_101_夜光聯名卡");
         credit_card.put("使用人數", "10000");
@@ -84,12 +82,16 @@ public class Top3Fragment extends Fragment {
         credit_card.put("星星", String.valueOf(R.drawable.star4));
         credit_list.add(credit_card);
 
+        img = view.findViewById(R.id.img);
+        reference = view.findViewById(R.id.reference);
+        showContent = view.findViewById(R.id.showContent);
+
         img.setImageResource(Integer.parseInt(credit_list.get(0).get("圖片")));
         showContent.setText(
                 "信用卡名：" + credit_list.get(0).get("銀行") + credit_list.get(0).get("信用卡名") + "\n" +
                         "使用人數：" + credit_list.get(0).get("使用人數"));
         reference.setImageResource(Integer.parseInt(credit_list.get(0).get("星星")));
 
-        return inflater.inflate(R.layout.fragment_top3, container, false);
+        return view;
     }
 }

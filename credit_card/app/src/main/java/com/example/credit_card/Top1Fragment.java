@@ -82,9 +82,9 @@ public class Top1Fragment extends Fragment {
         credit_card.put("星星", String.valueOf(R.drawable.star5));
         credit_list.add(credit_card);
 
-        img = getView().findViewById(R.id.img);
-        reference = getView().findViewById(R.id.reference);
-        showContent = getView().findViewById(R.id.showContent);
+        img = view.findViewById(R.id.img);
+        reference = view.findViewById(R.id.reference);
+        showContent = view.findViewById(R.id.showContent);
 
         img.setImageResource(Integer.parseInt(credit_list.get(0).get("圖片")));
         showContent.setText(

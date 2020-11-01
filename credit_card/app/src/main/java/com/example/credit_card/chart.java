@@ -114,4 +114,6 @@ public class chart extends AppCompatActivity implements View.OnTouchListener, Ge
         return gd.onTouchEvent(event);
 //        return false;
     }
+
+
 }
