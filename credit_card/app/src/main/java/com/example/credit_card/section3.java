@@ -33,7 +33,7 @@ public class section3 extends AppCompatActivity {
 //        credit_data.setProperties(17, input_salary.getText());
 //        credit_data.setProperties(18, fee.getText());
 
-        startActivity(new Intent(section3.this, fake_data.class));
+        startActivity(new Intent(section3.this, MainActivity_Show_Result.class));
     }
 
     public void back2(View view){
