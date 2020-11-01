@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">信用卡個人化推薦app</string>
+    <string name="app_name">卡卡神探</string>
 
     <string-array name="want_options">
         <item>綜合排名</item>
@@ -8,4 +8,6 @@
         <item>年費</item>
 
     </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

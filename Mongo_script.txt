@@ -1,0 +1,33 @@
+use creditcard
+
+db.card.drop();
+
+db.card.insertMany([ 
+
+    {name:"001", a: 3, b: 4, c: 3, 
+	d: 2, e: 4, f:5, g: 4},
+
+    {name:"002", a: 5, b: 5, c: 6, 
+	d: 3, e: 5, f:5, g: 3},
+
+    {name:"003", a: 7, b: 1, c: 3, 
+	d: 3, e: 7,f:5, g: 3},
+
+    {name:"004", a: 3, b: 4, c: 3, 
+	d: 3, e: 8,f:5, g: 3},
+
+]); 
+
+db.comment.drop();
+
+db.comment.insertMany([ 
+
+    {name:"001", comment:"好好用的卡片"},
+
+    {name:"002", comment:"好好用的卡"},
+
+    {name:"003", comment:"好好用的"},
+
+    {name:"004", comment:"好好用"},
+
+]); 

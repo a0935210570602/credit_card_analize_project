@@ -4,454 +4,77 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_gravity="center"
-    android:orientation="vertical"
+    android:background="#4F4F4F"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="#000000"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="338dp"
+        android:layout_height="435dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/frame_shape"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView21"
+            android:layout_width="280dp"
+            android:layout_height="69dp"
+            android:layout_marginStart="29dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="29dp"
+            android:text="你好:D                                   歡迎使用卡卡神探~~   "
+            android:textColor="#7C6E6E"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="281dp"
+            android:layout_height="141dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="29dp"
+            android:text="卡卡神探是個可以從你留下的線索中來為你量身評估篩選出最適合你的信用卡的小幫手唷!"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="281dp"
+            android:layout_height="147dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="21dp"
+            android:text="現在就動動你的手指把你中意的資訊留給我們吧!"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="136dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="136dp"
+        android:background="@drawable/btn_all_shape"
+        android:onClick="onClick"
+        android:text="Start"
+        android:textColor="#7C6E6E"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
-            android:orientation="vertical">
-
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="信用&amp;金融卡分析推薦"
-                android:textColor="#FBFBFB"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text='"使用者"你好，很高興您使用本app做為您選擇申辦信用卡的參考，我們將會依您所提供的幾項資料結果來為您推薦適合您的卡片。'
-                android:textColor="#FBFAFA"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="match_parent"
-                android:layout_height="344dp"
-                app:srcCompat="@drawable/card1" />
-
-            <TextView
-                android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="此處下滑開始進行回答"
-                android:textColor="#FAF8F8"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/textView6"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="⇩   ⇩   ⇩   ⇩   ⇩"
-                android:textColor="#FAFAFA"
-                android:textSize="30sp" />
-
-            <TextView
-                android:id="@+id/textView7"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="72sp" />
-
-            <TextView
-                android:id="@+id/textView9"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:text="1.想找什麼功能的卡片?"
-                android:textColor="#FBF6F6"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <RadioGroup
-                android:id="@+id/func"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_horizontal"
-                android:orientation="horizontal">
-
-
-                <RadioButton
-                    android:id="@+id/radioButton1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="現金回饋"
-                    android:textColor="#FFFFFF"
-                    android:buttonTint="@color/red"/>
-                <RadioButton
-                    android:id="@+id/radioButton2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="紅利點數回饋"
-                    android:textColor="#FFFFFF"
-                    android:buttonTint="@color/red"/>
-
-                <RadioButton
-                    android:id="@+id/radioButton"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="皆可"
-                    android:textColor="#FFFFFF"
-                    android:buttonTint="@color/red"/>
-
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/textView8"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text=" "
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="2.使用通路"
-                android:textColor="#F8F6F6"
-                android:textColorHighlight="#FFFFFF"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <RadioGroup
-                android:id="@+id/loc_for"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="fill"
-                android:orientation="horizontal">
-
-                <RadioButton
-                    android:id="@+id/radioButton5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="國內消費"
-                    android:textColor="#FFFFFF"
-                    android:buttonTint="@color/red"/>
-
-                <RadioButton
-                    android:id="@+id/radioButton6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="國外消費"
-                    android:textColor="#FFFFFF"
-                    android:buttonTint="@color/red"/>
-
-                <RadioButton
-                    android:id="@+id/radioButton7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:shadowColor="#FFFFFF"
-                    android:text="通用"
-                    android:textColor="#FFFFFF"
-                    android:buttonTint="@color/red"/>
-            </RadioGroup>
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
-
-            <TextView
-                android:id="@+id/textView13"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:text="3.消費習慣or特殊需求"
-                android:textColor="#FFFDFD"
-                android:textSize="24sp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/checkBox1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:button="?android:attr/listChoiceIndicatorMultiple"
-                    android:shadowColor="#FFFFFF"
-                    android:text="超商"
-                    android:textColor="#FBFBFB"
-                    android:buttonTint="@color/red"/>
-
-                <CheckBox
-                    android:id="@+id/checkBox2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="量販店"
-                    android:textColor="#FBFAFA"
-                    android:buttonTint="@color/red"/>
-
-                <CheckBox
-                    android:id="@+id/checkBox3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="餐廳"
-                    android:textColor="#FBFAFA"
-                    android:buttonTint="@color/red"/>
-
-                <CheckBox
-                    android:id="@+id/checkBox4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="電影"
-                    android:textColor="#FBFAFA"
-                    android:buttonTint="@color/red"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/checkBox13"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="加油"
-                    android:textColor="@android:color/background_light"
-                    android:buttonTint="@color/red"/>
-
-                <CheckBox
-                    android:id="@+id/checkBox14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="網購"
-                    android:textColor="@android:color/background_light"
-                    android:buttonTint="@color/red"/>
-
-                <CheckBox
-                    android:id="@+id/checkBox15"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="首刷禮"
-                    android:textColor="@android:color/background_light"
-                    android:buttonTint="@color/red"/>
-
-                <CheckBox
-                    android:id="@+id/checkBox16"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="繳保費"
-                    android:textColor="@android:color/background_light"
-                    android:buttonTint="@color/red"/>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/checkBox5"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="繳費(水電...)"
-                    android:textColor="#FDFCFC"
-                    android:buttonTint="@color/red"/>
-
-                <CheckBox
-                    android:id="@+id/checkBox6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="飛行"
-                    android:textColor="#FDFCFC"
-                    android:buttonTint="@color/red"/>
-
-                <CheckBox
-                    android:id="@+id/checkBox7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="飲料店"
-                    android:textColor="#FDFCFC"
-                    android:buttonTint="@color/red"/>
-
-                <CheckBox
-                    android:id="@+id/checkBox8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="百貨公司"
-                    android:textColor="#FDFCFC"
-                    android:buttonTint="@color/red"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
-
-                <CheckBox
-                    android:id="@+id/checkBox9"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="通勤"
-                    android:textColor="#FDFBFB"
-                    android:buttonTint="@color/red"/>
-
-                <CheckBox
-                    android:id="@+id/checkBox10"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="聯名卡"
-                    android:textColor="#FAF6F6"
-                    android:buttonTint="@color/red"/>
-
-                <CheckBox
-                    android:id="@+id/checkBox11"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="無腦刷"
-                    android:textColor="#FAF6F6"
-                    android:buttonTint="@color/red"/>
-
-                <CheckBox
-                    android:id="@+id/checkBox12"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="額外加碼活動"
-                    android:textColor="#FFFFFF"
-                    android:buttonTint="@color/red"/>
-
-                <TextView
-                    android:id="@+id/textView14"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:textSize="30sp" />
-            </LinearLayout>
-
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="24sp" />
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/input_salary"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="4.輸入年收入(單位:萬)"
-                    android:singleLine="true"
-                    android:textColor="#FFFFFF"
-                    android:textColorHighlight="#FFFFFF"
-                    android:textColorHint="@color/cardview_light_background"
-                    android:textCursorDrawable="@color/design_default_color_surface"
-                    android:textSize="24sp" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/year_fee"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="5.可接受最高年費"
-                    android:singleLine="true"
-                    android:textColor="#FFFFFF"
-                    android:textColorHighlight="#FFFFFF"
-                    android:textSize="24sp"
-                    android:theme="@style/AppTheme" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <TextView
-                android:id="@+id/textView16"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="36sp" />
-
-            <Button
-                android:id="@+id/send_out"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:background="@drawable/btn_all_shape"
-                android:text="資料送出"
-                android:textColor="#FFFFFF"
-                tools:layout_editor_absoluteY="1021dp" />
-
-            <TextView
-                android:id="@+id/show"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="#F8F6F6"
-                android:textSize="24sp" />
-
-            <TextView
-                android:id="@+id/show1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="傳輸狀態"
-                android:textColor="#FFFFFF" />
-
-        </LinearLayout>
-    </ScrollView>
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintVertical_bias="0.1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
