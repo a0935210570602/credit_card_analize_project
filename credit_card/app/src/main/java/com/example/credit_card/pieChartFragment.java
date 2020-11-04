@@ -26,16 +26,14 @@ import java.util.List;
 public class pieChartFragment extends Fragment {
 
     AnyChartView anyChartView;
-    String[] mon = {"紅利折抵金", "紅利換里程", "最高基點倍數",
-            "首刷里程回饋", "國外消費累積哩程", "國內消費累積哩程",
-            "周末電影折扣", "平日電影折扣", "加油現金回饋",
-            "加油優惠", "國外消費線回饋", "國內消費現金回饋",
-            "數位通路回饋上限", "網購回饋"};
-    int[] wei = {30,40,80,
-            70,55,44,
-            90,30,10,
-            50,88,47,
-            10,58};
+    String[] mon = {"紅利折抵金", "紅利換里程", "最高積點倍數",
+            "首刷哩程回饋", "國外消費累積哩程", "國內消費累積哩程",
+            "數位通路回饋上限", "網購回饋", "年費", "周末電影折扣", "平日電影折扣", "加油現金回饋",
+            "加油優惠", "國外消費線回饋", "國內消費現金回饋"};
+    int[] wei = {0,0,0,0,
+                 0,0,0,0,
+                 0,0,0,0,
+                 0,0,0};
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -49,7 +47,29 @@ public class pieChartFragment extends Fragment {
     public pieChartFragment() {
         // Required empty public constructor
     }
+    public void getData(GlobalVariable data){
+        data.printProperties();
+        for (Integer i = 1; i < 16; i++)                           // 2  redpoint_mile         // 3  point_mutiple
+            wei[i-1] = data.user_statistics.get(i);
+        sort();
+    }
 
+    private void sort(){
+        Integer flag = 0;
+        String s_flag = "";
+        for(Integer i=0;i<14;i++){
+            for(Integer j=i+1;j<15;j++){
+                if(wei[i]>wei[j]){
+                    flag = wei[j];
+                    wei[j] = wei[i];
+                    wei[i] = flag;
+                    s_flag = mon[j];
+                    mon[j] = mon[i];
+                    mon[i] = s_flag;
+                }
+            }
+        }
+    }
     /**
      * Use this factory method to create a new instance of
      * this fragment using the provided parameters.

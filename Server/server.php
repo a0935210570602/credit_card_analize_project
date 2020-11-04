@@ -7,11 +7,16 @@
     header('Access-Control-Allow-Credentials: true');
 
     $json = file_get_contents('php://input');
+
     //raw data {"creditcard_name":"002","comment":"yourmothesssr","request_code":202}
     $data = json_decode($json);
+
     $request_code = $data->request_code;
-    // $request_code = 202;
+    // echo $request_code;
+    // $request_code = 200;
     $json_encode = json_encode($data);
+    // echo $json_encode;
+
     // $json_encode = "{creditcard_name:001,comment:yourmother,request_code:202}";
     // 200 資料庫更新請求
     // 201 分析權重，信用卡推薦

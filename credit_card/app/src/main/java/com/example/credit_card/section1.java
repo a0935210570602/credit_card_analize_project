@@ -30,7 +30,7 @@ public class section1 extends AppCompatActivity {
         switch (func1.getCheckedRadioButtonId()){
             case R.id.radioButton1:
                 check_is_done += 1;
-                credit_data.setProperties(16, 20);
+                credit_data.setProperties(14, 20);
                 credit_data.setProperties(15, 20);
                 credit_data.setProperties(8, 3);
                 credit_data.setProperties(12, 3);
@@ -44,7 +44,7 @@ public class section1 extends AppCompatActivity {
                 break;
             case R.id.radioButton3:
                 check_is_done += 1;
-                credit_data.setProperties(16, 10);
+                credit_data.setProperties(14, 10);
                 credit_data.setProperties(1, 10);
                 break;
         }
@@ -52,7 +52,7 @@ public class section1 extends AppCompatActivity {
         switch (func2.getCheckedRadioButtonId()){
             case R.id.radioButton4:
                 check_is_done += 1;
-                credit_data.setProperties(16, 20);
+                credit_data.setProperties(14, 20);
                 break;
             case R.id.radioButton5:
                 check_is_done += 1;
@@ -60,7 +60,7 @@ public class section1 extends AppCompatActivity {
                 break;
             case R.id.radioButton6:
                 check_is_done += 1;
-                credit_data.setProperties(16, 10);
+                credit_data.setProperties(14, 10);
                 credit_data.setProperties(15, 10);
                 break;
         }
