@@ -28,11 +28,6 @@ public class section3 extends AppCompatActivity {
         GlobalVariable credit_data = (GlobalVariable)getApplicationContext();
         credit_data.initializationProperties();
 
-
-
-//        credit_data.setProperties(17, input_salary.getText());
-//        credit_data.setProperties(18, fee.getText());
-
         startActivity(new Intent(section3.this, MainActivity_Show_Result.class));
     }
 

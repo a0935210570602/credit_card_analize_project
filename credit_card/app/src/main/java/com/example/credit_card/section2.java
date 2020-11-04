@@ -12,7 +12,7 @@ public class section2 extends AppCompatActivity {
     CheckBox chk;
     int[] id = {R.id.checkBox1, R.id.checkBox2, R.id.checkBox3, R.id.checkBox4, R.id.checkBox5, R.id.checkBox6
             , R.id.checkBox7, R.id.checkBox8, R.id.checkBox9, R.id.checkBox10, R.id.checkBox11, R.id.checkBox12
-            , R.id.checkBox13, R.id.checkBox14, R.id.checkBox15, R.id.checkBox16};
+            };
     Button send, back;
 
     @Override
@@ -98,16 +98,20 @@ public class section2 extends AppCompatActivity {
                     }
                 case R.id.checkBox8:
                     if (chk.isChecked()){
-                        credit_data.setProperties(16, 8);
-                        credit_data.setProperties(15, 8);
                         credit_data.setProperties(1, 10);
+                        credit_data.setProperties(6, 3);
+                        credit_data.setProperties(15, 1);
+                        credit_data.setProperties(16, 1);
                         break;
                     }
                 case R.id.checkBox9:
                     if (chk.isChecked()){
-                        credit_data.setProperties(16, 10);
-                        credit_data.setProperties(15, 6);
-                        credit_data.setProperties(1, 10);
+                        credit_data.setProperties(14, 20);
+                        credit_data.setProperties(12, 20);
+                        credit_data.setProperties(2, 5);
+                        credit_data.setProperties(4, 5);
+                        credit_data.setProperties(15, 2);
+                        credit_data.setProperties(1, 2);
                         break;
                     }
                 case R.id.checkBox10:
@@ -138,44 +142,10 @@ public class section2 extends AppCompatActivity {
                         credit_data.setProperties(2, 4);
                         break;
                     }
-                case R.id.checkBox13:
-                    if (chk.isChecked()){
-                        credit_data.setProperties(14, 20);
-                        credit_data.setProperties(12, 20);
-                        credit_data.setProperties(2, 5);
-                        credit_data.setProperties(4, 5);
-                        credit_data.setProperties(15, 2);
-                        credit_data.setProperties(1, 2);
-                        break;
-                    }
-                case R.id.checkBox14:
-                    if (chk.isChecked()){
-                        credit_data.setProperties(16, 10);
-                        credit_data.setProperties(15, 8);
-                        credit_data.setProperties(1, 10);
-                        credit_data.setProperties(8, 10);
-                        credit_data.setProperties(3, 10);
-                        break;
-                    }
-                case R.id.checkBox15:
-                    if (chk.isChecked()){
-                        credit_data.setProperties(1, 10);
-                        credit_data.setProperties(6, 3);
-                        credit_data.setProperties(15, 1);
-                        credit_data.setProperties(16, 1);
-                        break;
-                    }
-                case R.id.checkBox16:
-                    if (chk.isChecked()){
-                        credit_data.setProperties(16, 5);
-                        credit_data.setProperties(15, 5);
-                        credit_data.setProperties(1, 5);
-                        credit_data.setProperties(8, 5);
-                        break;
-                    }
+                default:
+                    break;
             }
         }
-
         startActivity(new Intent(section2.this, section3.class));
     }
 

@@ -26,7 +26,7 @@ public class MainActivity_Show_Result extends AppCompatActivity {
     Toolbar toolbartab;
     ViewPager viewPager;
     TabLayout tabLayout;
-    Button btn1, btn2, btn3, btn4;
+    ImageView img1, img2, img3, img4;
     Handler handler;
     Runnable runnable;
     PageAdapter pageAdapter;
@@ -46,10 +46,10 @@ public class MainActivity_Show_Result extends AppCompatActivity {
         toolbartab = findViewById(R.id.toolbartab);
         viewPager = findViewById(R.id.viewpager);
         tabLayout = findViewById(R.id.tablayout);
-        btn1 = findViewById(R.id.button1);
-        btn2 = findViewById(R.id.button2);
-        btn3 = findViewById(R.id.button3);
-        btn4 = findViewById(R.id.button4);
+        img1 = findViewById(R.id.img1);
+        img2 = findViewById(R.id.img2);
+        img3 = findViewById(R.id.img3);
+        img4 = findViewById(R.id.img4);
 
 
 //        credit_card.put("銀行", "花旗銀行");
@@ -187,27 +187,27 @@ public class MainActivity_Show_Result extends AppCompatActivity {
             handler.removeCallbacks(runnable);
             viewPager.removeAllViewsInLayout();
             reference();
-            btn1.setEnabled(false);
-            btn2.setEnabled(true);
-            btn3.setEnabled(true);
+            img1.setEnabled(false);
+            img2.setEnabled(true);
+            img3.setEnabled(true);
         }
     }
     public void btn2(View view){
         if (handler != null) {
             handler.removeCallbacks(runnable);
             chart();
-            btn1.setEnabled(true);
-            btn2.setEnabled(false);
-            btn3.setEnabled(true);
+            img1.setEnabled(true);
+            img2.setEnabled(false);
+            img3.setEnabled(true);
         }
     }
     public void btn3(View view){
         if (handler != null) {
             handler.removeCallbacks(runnable);
             showInfo();
-            btn1.setEnabled(true);
-            btn2.setEnabled(true);
-            btn3.setEnabled(false);
+            img1.setEnabled(true);
+            img2.setEnabled(true);
+            img3.setEnabled(false);
         }
     }
     public void btn4(View view){
