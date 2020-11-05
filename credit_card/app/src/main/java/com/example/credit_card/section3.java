@@ -35,10 +35,10 @@ public class section3 extends AppCompatActivity {
     }
 
     public void showResult(View view){
-        Thread thread = new Thread(mutiThread);
-        thread.start(); // 開始執行
+//        Thread thread = new Thread(mutiThread);
+//        thread.start(); // 開始執行
         GlobalVariable credit_data = (GlobalVariable)getApplicationContext();
-//        startActivity(new Intent(section3.this, MainActivity_Show_Result.class));
+        startActivity(new Intent(section3.this, MainActivity_Show_Result.class));
     }
 
     public void back2(View view){

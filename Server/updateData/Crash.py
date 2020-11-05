@@ -1,4 +1,4 @@
-
+﻿
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 import time
@@ -7,15 +7,15 @@ from Get_inf import *
 import pandas as pd
 import numpy as np
 from Write_to_excel import write_to_excel
-options = Options()
-options.add_argument("--disable-notifications")
-chrome = webdriver.Chrome('C:/Development/xampp/htdocs/Server/updateData/chromedriver.exe', chrome_options=options)
+
 
 #現金回饋
 def crash0():
     print("現金回饋")
     usr = "https://www.money101.com.tw/%E4%BF%A1%E7%94%A8%E5%8D%A1/%E7%8F%BE%E9%87%91%E5%9B%9E%E9%A5%8B"
-    
+    options = Options()
+    options.add_argument("--disable-notifications")
+    chrome = webdriver.Chrome('D:\\coding_project\\project\\credit_card_analize_project\\Server\\updateData\\chromedriver.exe', chrome_options=options)
     chrome.get(usr)
 
     #利用class_name 來定位所要抓取的部分
@@ -63,9 +63,10 @@ def crash1():
 
     options = Options()
     options.add_argument("--disable-notifications")
-    chrome = webdriver.Chrome('C:/Development/xampp/htdocs/Server/updateData/chromedriver.exe', chrome_options=options)
+    chrome = webdriver.Chrome('D:\\coding_project\\project\\credit_card_analize_project\\Server\\updateData\\chromedriver.exe', chrome_options=options)
 
-    # chrome = webdriver.Chrome('C:/Users/USER/OneDrive/桌面/信用卡推薦系統_爬蟲程式/chromedriver.exe', chrome_options=options)
+    #     chrome = webdriver.Chrome('D:\\coding_project\\project\\credit_card_analize_project\\Server\\updateData\\chromedriver.exe', chrome_options=options)
+
     chrome.get(usr)
 
     #利用class_name 來定位所要抓取的部分
@@ -111,7 +112,8 @@ def crash2():
     options = Options()
     options.add_argument("--disable-notifications")
 
-    chrome = webdriver.Chrome('C:/Development/xampp/htdocs/Server/updateData/chromedriver.exe', chrome_options=options)
+    chrome = webdriver.Chrome('D:\\coding_project\\project\\credit_card_analize_project\\Server\\updateData\\chromedriver.exe', chrome_options=options)
+
 
     chrome.get(usr)
 
@@ -152,7 +154,8 @@ def crash3():
     options = Options()
     options.add_argument("--disable-notifications")
 
-    chrome = webdriver.Chrome('C:/Development/xampp/htdocs/Server/updateData/chromedriver.exe', chrome_options=options)
+    chrome = webdriver.Chrome('D:\\coding_project\\project\\credit_card_analize_project\\Server\\updateData\\chromedriver.exe', chrome_options=options)
+
 
     chrome.get(usr)
 
@@ -193,7 +196,8 @@ def crash4():
     options = Options()
     options.add_argument("--disable-notifications")
 
-    chrome = webdriver.Chrome('C:/Development/xampp/htdocs/Server/updateData/chromedriver.exe', chrome_options=options)
+    chrome = webdriver.Chrome('D:\\coding_project\\project\\credit_card_analize_project\\Server\\updateData\\chromedriver.exe', chrome_options=options)
+
 
     chrome.get(usr)
 
@@ -234,7 +238,8 @@ def crash5():
     options = Options()
     options.add_argument("--disable-notifications")
 
-    chrome = webdriver.Chrome('C:/Development/xampp/htdocs/Server/updateData/chromedriver.exe', chrome_options=options)
+    chrome = webdriver.Chrome('D:\\coding_project\\project\\credit_card_analize_project\\Server\\updateData\\chromedriver.exe', chrome_options=options)
+
 
     chrome.get(usr)
 
@@ -275,7 +280,8 @@ def crash6():
     options = Options()
     options.add_argument("--disable-notifications")
 
-    chrome = webdriver.Chrome('C:/Development/xampp/htdocs/Server/updateData/chromedriver.exe', chrome_options=options)
+    chrome = webdriver.Chrome('D:\\coding_project\\project\\credit_card_analize_project\\Server\\updateData\\chromedriver.exe', chrome_options=options)
+
 
     chrome.get(usr)
 
@@ -316,7 +322,8 @@ def crash7():
     options = Options()
     options.add_argument("--disable-notifications")
 
-    chrome = webdriver.Chrome('C:/Development/xampp/htdocs/Server/updateData/chromedriver.exe', chrome_options=options)
+    chrome = webdriver.Chrome('D:\\coding_project\\project\\credit_card_analize_project\\Server\\updateData\\chromedriver.exe', chrome_options=options)
+
 
     chrome.get(usr)
 
@@ -357,7 +364,8 @@ def crash8():
     options = Options()
     options.add_argument("--disable-notifications")
 
-    chrome = webdriver.Chrome('C:/Development/xampp/htdocs/Server/updateData/chromedriver.exe', chrome_options=options)
+    chrome = webdriver.Chrome('D:\\coding_project\\project\\credit_card_analize_project\\Server\\updateData\\chromedriver.exe', chrome_options=options)
+
 
     chrome.get(usr)
 
@@ -402,7 +410,8 @@ def crash9():
     options = Options()
     options.add_argument("--disable-notifications")
 
-    chrome = webdriver.Chrome('C:/Development/xampp/htdocs/Server/updateData/chromedriver.exe', chrome_options=options)
+    chrome = webdriver.Chrome('D:\\coding_project\\project\\credit_card_analize_project\\Server\\updateData\\chromedriver.exe', chrome_options=options)
+
 
     chrome.get(usr)
 
@@ -443,7 +452,8 @@ def crash10():
     options = Options()
     options.add_argument("--disable-notifications")
 
-    chrome = webdriver.Chrome('C:/Development/xampp/htdocs/Server/updateData/chromedriver.exe', chrome_options=options)
+    chrome = webdriver.Chrome('D:\\coding_project\\project\\credit_card_analize_project\\Server\\updateData\\chromedriver.exe', chrome_options=options)
+
 
     chrome.get(usr)
 

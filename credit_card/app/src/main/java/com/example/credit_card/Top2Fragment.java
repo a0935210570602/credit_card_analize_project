@@ -1,6 +1,7 @@
 package com.example.credit_card;
 
 import android.annotation.SuppressLint;
+import android.graphics.Typeface;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -159,8 +160,10 @@ public class Top2Fragment extends Fragment {
 
         img.setImageResource(Integer.parseInt(credit_list.get(0).get("圖片")));
         showContent.setText(
-                "信用卡名：" + credit_list.get(0).get("銀行") + credit_list.get(0).get("信用卡名") + "\n" );
+                credit_list.get(0).get("信用卡名") + "\n" );
         reference.setImageResource(Integer.parseInt(credit_list.get(0).get("星星")));
+        showContent.setTypeface(Typeface.DEFAULT_BOLD);
+        showContent.setTextSize(20);
         Button btn = view.findViewById(R.id.button);
         final EditText edit = view.findViewById(R.id.det);
 

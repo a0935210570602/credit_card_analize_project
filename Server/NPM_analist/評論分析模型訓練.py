@@ -72,7 +72,7 @@ pip install simpletransformers==0.48.15
 from simpletransformers.classification import ClassificationModel
 !pip install wandb
 model = ClassificationModel('bert', 'hfl/chinese-bert-wwm')
-model.train_model(train_df, args = {'/content/wan': True})
+model.train_model(train_df, self.args['/content/wan'])
 
 result, model_output, wrong_predictions = model.eval_model(test_df)
 result
