@@ -1,0 +1,13 @@
+執行流程:
+
+1. 先執行 main.py (抓取新用卡資訊)
+	會出現: crash_all.xlsx、num_range.xlsx、result_lst.xlsx
+
+2. 在執行 Get_image_url.py (抓取信用卡圖片網址)
+	會出現: card_url_1.xlsx ~ card_url_11.xlsx (共11個excel檔)
+
+3. 最後在執行 result_url.py (將以上資料合併)
+	會出現: result_url.xlsx
+
+
+PS: 要記得將 Crash.py 中的 path 改成 chrome.exe 的路徑。
