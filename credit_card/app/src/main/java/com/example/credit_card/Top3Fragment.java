@@ -1,21 +1,15 @@
 package com.example.credit_card;
 
-import android.annotation.SuppressLint;
-import android.graphics.Typeface;
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -74,75 +68,6 @@ public class Top3Fragment extends Fragment {
         }
     }
 
-    @SuppressLint("ResourceAsColor")
-    private void setCommentLayout(View view) {
-        LinearLayout linear = view.findViewById(R.id.linear);
-        TextView text = new TextView(this.getContext());
-        text.setGravity(Gravity.LEFT);
-        TextView text4 = new TextView(this.getContext());
-        text4.setGravity(Gravity.LEFT);
-        TextView text2 = new TextView(this.getContext());
-        text2.setGravity(Gravity.CENTER);
-        text2.setText("匿名留言專區：");
-        text2.setTextColor(R.color.green);
-        text2.setTextSize(30);
-        TextView text3 = new TextView(this.getContext());
-        text3.setGravity(Gravity.LEFT);
-
-
-        linear.addView(text);
-        linear.addView(text4);
-        linear.addView(text2);
-        linear.addView(text3);
-
-        ArrayList<String> comment_list = new ArrayList<String>();
-        comment_list.add("中國信託真是佛心");
-        comment_list.add("這張卡的紅利折抵真是太高了");
-        comment_list.add("希望大家多多使用");
-        comment_list.add("推薦給大家這張卡喔，他給了我超多優惠的");
-        comment_list.add("這張卡生日時還送我禮物耶!");
-        comment_list.add("沒有後悔辦過這張卡");
-        comment_list.add("好用好用，太好用了");
-        comment_list.add("出國搭飛機時也很方便");
-        comment_list.add("來看看有多少人覺得好用，好用的+1");
-        comment_list.add("+1");
-        comment_list.add("+1");
-        comment_list.add("+1");
-        comment_list.add("+1");
-        comment_list.add("+1");
-        comment_list.add("+1");
-        comment_list.add("+1");
-        comment_list.add("+1");
-        comment_list.add("+1");
-        comment_list.add("+1");
-        comment_list.add("好用推推推");
-
-        for(int i=0;i<comment_list.size();i++){
-            LinearLayout child_linear = new LinearLayout(this.getContext());
-            child_linear.setOrientation(LinearLayout.HORIZONTAL);
-
-            ImageView iconima = new ImageView(this.getContext());
-            iconima.setImageResource(R.drawable.people_icon);
-            iconima.setMaxWidth(i);
-            iconima.setMaxHeight(i);
-            iconima.setTag("匿名");
-            iconima.setContentDescription("匿名");
-            iconima.setScaleType(ImageView.ScaleType.FIT_CENTER);
-
-            TextView textViewId = new TextView(this.getContext());
-            textViewId.setGravity(Gravity.LEFT);
-            textViewId.setText(comment_list.get(i));
-            textViewId.setTextSize(20);
-            TextView text5 = new TextView(this.getContext());
-            text5.setGravity(Gravity.LEFT);
-
-            child_linear.addView(iconima);
-            child_linear.addView(textViewId);
-            child_linear.addView(text5);
-            linear.addView(child_linear);
-        }
-    }
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -152,34 +77,20 @@ public class Top3Fragment extends Fragment {
         credit_card = new HashMap<>();
         credit_card.put("銀行", "中國信託");
         credit_card.put("信用卡名", "TAIPEI_101_夜光聯名卡");
+        credit_card.put("使用人數", "10000");
         credit_card.put("圖片", String.valueOf(R.drawable.card_03));
-        credit_card.put("星星", String.valueOf(R.drawable.star3));
+        credit_card.put("星星", String.valueOf(R.drawable.star4));
         credit_list.add(credit_card);
 
-        img = view.findViewById(R.id.img4);
+        img = view.findViewById(R.id.img);
         reference = view.findViewById(R.id.reference);
         showContent = view.findViewById(R.id.showContent);
 
         img.setImageResource(Integer.parseInt(credit_list.get(0).get("圖片")));
         showContent.setText(
-                credit_list.get(0).get("信用卡名") + "\n");
+                "信用卡名：" + credit_list.get(0).get("銀行") + credit_list.get(0).get("信用卡名") + "\n" +
+                        "使用人數：" + credit_list.get(0).get("使用人數"));
         reference.setImageResource(Integer.parseInt(credit_list.get(0).get("星星")));
-        showContent.setTypeface(Typeface.DEFAULT_BOLD);
-        showContent.setTextSize(20);
-        Button btn = view.findViewById(R.id.button);
-        final EditText edit = view.findViewById(R.id.det);
-
-        btn.setOnClickListener(
-                new View.OnClickListener(){
-                    @Override
-                    public void onClick(View v){
-                        edit.setText("");
-                        Toast.makeText(getContext(), "發表評論成功", Toast.LENGTH_LONG).show();
-                    }
-                }
-        );
-        setCommentLayout(view);
-        setCommentLayout(view);
 
         return view;
     }

@@ -10,7 +10,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="338dp"
-        android:layout_height="wrap_content"
+        android:layout_height="435dp"
         android:layout_marginStart="32dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
@@ -22,29 +22,47 @@
         <TextView
             android:id="@+id/textView21"
             android:layout_width="280dp"
-            android:layout_height="wrap_content"
+            android:layout_height="69dp"
             android:layout_marginStart="29dp"
-            android:layout_marginTop="32dp"
+            android:layout_marginTop="38dp"
             android:layout_marginEnd="29dp"
-            android:layout_marginBottom="150dp"
-            android:lineSpacingExtra="8sp"
-            android:text="你好:D\n歡迎使用卡卡神探~~
-                \n\n卡卡神探是個可以從你留下的線索中來為你量身評估篩選出最適合你的信用卡的小幫手唷!
-                \n\n現在就動動你的手指把你中意的資訊留給我們吧!"
+            android:text="你好:D                                   歡迎使用卡卡神探~~   "
             android:textColor="#7C6E6E"
             android:textSize="24sp"
-            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="281dp"
+            android:layout_height="141dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="29dp"
+            android:text="卡卡神探是個可以從你留下的線索中來為你量身評估篩選出最適合你的信用卡的小幫手唷!"
+            android:textSize="24sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView21" />
+
+        <TextView
+            android:id="@+id/textView23"
+            android:layout_width="281dp"
+            android:layout_height="147dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="21dp"
+            android:text="現在就動動你的手指把你中意的資訊留給我們吧!"
+            android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0" />
+            app:layout_constraintTop_toBottomOf="@+id/textView22" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
+        android:layout_width="88dp"
+        android:layout_height="48dp"
         android:layout_marginStart="136dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="136dp"

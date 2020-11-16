@@ -8,8 +8,8 @@ import requests
 headers = {
    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36 Edg/85.0.564.41'
    }
-restaurant_name = "饗食天堂_台北京站店" #6207評論 #存擋用
-url_prefix = "https://www.google.com/async/reviewSort?vet=12ahUKEwiz85Pt0d_sAhXTIqYKHSEWCaEQxyx6BAgBEC0..i&ved=2ahUKEwiz85Pt0d_sAhXTIqYKHSEWCaEQjit6BQgBEIgB&rlz=1C1CHBF_zh-TWTW910TW910&yv=3&async=feature_id:0x3442a96d74fc20d5%3A0x2a9bea92dc76f286,review_source:All%20reviews,sort_by:"
+restaurant_name = "饗食天堂_桃園新光店" #6207評論 #存擋用
+url_prefix = "https://www.google.com/async/reviewSort?vet=12ahUKEwiCttLajOLsAhXIyYsBHer1DKwQxyx6BAgBEC0..i&ved=2ahUKEwiCttLajOLsAhXIyYsBHer1DKwQjit6BQgBEJMB&yv=3&async=feature_id:0x34681efcb446c825%3A0x856f2837ce5c62e0,review_source:All%20reviews,sort_by:"
 #建立author, grade, comment來存放資料
 author =[]
 grade = []

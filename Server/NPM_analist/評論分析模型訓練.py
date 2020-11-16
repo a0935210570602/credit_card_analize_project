@@ -7,18 +7,15 @@ Original file is located at
     https://colab.research.google.com/drive/1vGx7q_egc9QGqh9E0bifKBO3wUAgmXGP
 """
 
-from google.colab import drive
 import pandas as pd
 
-drive.mount('/content/gdrive')
-
-google_comment_df  = pd.read_csv("/content/google_饗食天堂_台北京站店_comment.csv")
-google_comment_df2 = pd.read_csv("/content/google_饗食天堂_台北信義店_comment.csv")
-google_comment_df3 = pd.read_csv("/content/google_饗食天堂_台北大直店_comment.csv")
-google_comment_df4 = pd.read_csv("/content/google_饗食天堂_新北板橋店_comment.csv")
-google_comment_df5 = pd.read_csv("/content/google_饗食天堂_桃園中壢店_comment.csv")
-google_comment_df6 = pd.read_csv("/content/google_饗食天堂_桃園新光店_comment.csv")
-
+google_comment_df  = pd.read_csv("google_饗食天堂_台北京站店_comment.csv")
+google_comment_df2 = pd.read_csv("google_饗食天堂_台北信義店_comment.csv")
+google_comment_df3 = pd.read_csv("google_饗食天堂_台北大直店_comment.csv")
+google_comment_df4 = pd.read_csv("google_饗食天堂_新北板橋店_comment.csv")
+google_comment_df5 = pd.read_csv("google_饗食天堂_桃園中壢店_comment.csv")
+google_comment_df6 = pd.read_csv("google_饗食天堂_桃園新光店_comment.csv")
+print("1")
 google_comment_df
 
 def convertScore(score): 
@@ -27,6 +24,7 @@ def convertScore(score):
      else:
         return 'bad'
 
+print("2")
 
 def Convert(google):
      google['status'] = google['評等'].map(lambda e : convertScore(e))
@@ -42,6 +40,7 @@ google_comment_df3 = Convert(google_comment_df3)
 google_comment_df4 = Convert(google_comment_df4)
 google_comment_df5 = Convert(google_comment_df5)
 google_comment_df6 = Convert(google_comment_df6)
+print("3")
 
 
 #接著我們把所有dataframe整合成一個google dataframe
@@ -57,22 +56,20 @@ good_df = google[   google['status'] ==1]
 good_df = good_df.sample(n=1025)
 
 google
+print("4")
 
 google['status'].value_counts().plot(kind='bar')
 
 from sklearn.model_selection import train_test_split
 train_df, test_df = train_test_split(google, test_size = 0.2, random_state = 927)
 train_df = pd.DataFrame(train_df)
+print("5")
 
-!pip install -U ipykernel
-!pip install modin[dask]
-
-pip install simpletransformers==0.48.15
 
 from simpletransformers.classification import ClassificationModel
-!pip install wandb
+
 model = ClassificationModel('bert', 'hfl/chinese-bert-wwm')
-model.train_model(train_df, self.args['/content/wan'])
+model.train_model(train_df, args = {'/content/wan': True})
 
 result, model_output, wrong_predictions = model.eval_model(test_df)
 result

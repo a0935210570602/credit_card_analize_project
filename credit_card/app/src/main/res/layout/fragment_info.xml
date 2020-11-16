@@ -43,7 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center"
-                    android:text="團隊成員"
+                    android:text="工作分配"
                     android:textColor="#000000"
                     android:textSize="30sp" />
 

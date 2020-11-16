@@ -21,6 +21,10 @@
         <activity android:name=".UserSuveyOne" />
         <activity android:name=".fake_data" />
         <activity android:name=".Info" />
+        <activity android:name=".chart" />
+        <activity android:name=".WhichToSee" />
+        <activity android:name=".WhichChart" />
+        <activity android:name=".chart2" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -32,7 +31,6 @@
                 <com.google.android.material.tabs.TabItem
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:scaleType="centerInside"
                     android:text="Top1" />
 
                 <com.google.android.material.tabs.TabItem
@@ -57,7 +55,6 @@
         android:layout_height="match_parent">
 
         <LinearLayout
-            android:id="@+id/linearLayout5"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:layout_marginTop="57dp"
@@ -73,177 +70,87 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
             </androidx.viewpager.widget.ViewPager>
         </LinearLayout>
 
         <LinearLayout
             android:id="@+id/linearLayout4"
-            android:layout_width="410dp"
-            android:layout_height="100dp"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
             android:background="#FFFFFF"
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout5">
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="210dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#5D5A52">
-
-                <ImageView
-                    android:id="@+id/img1"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="32dp"
-                    android:layout_weight="1"
-                    android:background="#5D5A52"
-                    android:onClick="btn1"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/downicon1" />
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="推薦卡片 "
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/img1" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            app:layout_constraintStart_toStartOf="parent">
 
             <TextView
+                android:id="@+id/textView42"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="                            " />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="210dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#5D5A52">
-
-                <ImageView
-                    android:id="@+id/img2"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="32dp"
-                    android:layout_weight="1"
-                    android:background="#5D5A52"
-                    android:onClick="btn2"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/downicon2" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="需求量化"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/img2" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
-            <TextView
+            <Button
+                android:id="@+id/button1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="                            " />
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="210dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="#5D5A52">
-
-                <ImageView
-                    android:id="@+id/img3"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="32dp"
-                    android:layout_weight="1"
-                    android:background="#5D5A52"
-                    android:onClick="btn3"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/downicon3" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="關於系統"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/img3" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                android:background="@drawable/target"
+                android:clickable="false"
+                android:onClick="btn1" />
 
             <TextView
+                android:id="@+id/textView38"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="                            " />
 
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="210dp"
-                android:layout_height="match_parent"
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#5D5A52">
+                android:background="@drawable/research"
+                android:onClick="btn2" />
 
-                <ImageView
-                    android:id="@+id/img4"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
-                    android:layout_marginStart="32dp"
-                    android:layout_marginTop="4dp"
-                    android:layout_marginEnd="32dp"
-                    android:layout_marginBottom="32dp"
-                    android:layout_weight="1"
-                    android:background="#5D5A52"
-                    android:onClick="btn4"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:srcCompat="@drawable/downicon4" />
+            <TextView
+                android:id="@+id/textView40"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="                            " />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="回到首頁"
-                    android:textColor="#FFFFFF"
-                    android:textSize="16sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/img4" />
-            </androidx.constraintlayout.widget.ConstraintLayout>
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/system"
+                android:onClick="btn3" />
 
+            <TextView
+                android:id="@+id/textView41"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="                            " />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/show"
+                android:onClick="btn4" />
+
+            <TextView
+                android:id="@+id/textView43"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="                            " />
         </LinearLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
